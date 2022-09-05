@@ -39,7 +39,7 @@ export default {
 #star {
     height: 120%;
     width: 40%;
-    background: url("../assets/images/stars.png") no-repeat center;
+    background: url("../assets/images/star.png") no-repeat center;
     background-size: cover;
     position: relative;
     bottom: 0;
