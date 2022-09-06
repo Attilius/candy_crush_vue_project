@@ -155,6 +155,11 @@ export default {
   background-size: cover;
 }
 
+.successed-level {
+  background: url("../assets/images/successed_level.png") no-repeat center;
+  background-size: cover;
+}
+
 .pulse {
   transition: ease-in;
   animation-duration: 0.5s; 
