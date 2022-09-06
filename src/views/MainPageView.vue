@@ -7,7 +7,7 @@
       <div class="body-right"></div>
     </div>
     <div class="map">
-      <div class="levels" id="level-1" @click="start">1</div>
+      <div class="levels successed-level" id="level-1" @click="start">1</div>
       <div class="levels actual-level pulse" id="level-2" @click="start">2</div>
       <div class="levels" id="level-3"><i class="fa-solid fa-lock"></i></div>
       <div class="levels" id="level-4"><i class="fa-solid fa-lock"></i></div>
