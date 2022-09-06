@@ -9,7 +9,7 @@
     <div class="map">
       <div class="skin">
         <div class="levels successed-level" id="level-1" @click="start">
-          <div class="three-stars"></div>
+          <div class="stars three-stars"></div>
           1
         </div>
         <div class="levels actual-level pulse" id="level-2" @click="start">
@@ -280,12 +280,15 @@ export default {
   font-size: 16px;
 }
 
-.three-stars {
+.stars {
   height: 30px;
   width: 60px;
-  background: url("../assets/images/three_stars.png") no-repeat center;
-  background-size: cover;
   position: absolute;
   top: -15px;
+}
+
+.three-stars{
+  background: url("../assets/images/three_stars.png") no-repeat center;
+  background-size: cover;
 }
 </style>
