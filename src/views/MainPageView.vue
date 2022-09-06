@@ -232,7 +232,7 @@ export default {
 
 #level-11 {
   position: absolute;
-  top: 270px;
+  top: 275px;
   left: 250px;
 }
 
