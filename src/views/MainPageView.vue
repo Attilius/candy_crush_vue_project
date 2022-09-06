@@ -9,22 +9,24 @@
     <div class="map">
       <div class="skin">
         <div class="levels successed-level" id="level-1" @click="start">
-        <div class="three-stars"></div>
-        1
+          <div class="three-stars"></div>
+          1
         </div>
-      <div class="levels actual-level pulse" id="level-2" @click="start">2</div>
-      <div class="levels" id="level-3"><i class="fa-solid fa-lock"></i></div>
-      <div class="levels" id="level-4"><i class="fa-solid fa-lock"></i></div>
-      <div class="levels" id="level-5"><i class="fa-solid fa-lock"></i></div>
-      <div class="levels" id="level-6"><i class="fa-solid fa-lock"></i></div>
-      <div class="levels" id="level-7"><i class="fa-solid fa-lock"></i></div>
-      <div class="levels" id="level-8"><i class="fa-solid fa-lock"></i></div>
-      <div class="levels" id="level-9"><i class="fa-solid fa-lock"></i></div>
-      <div class="levels" id="level-10"><i class="fa-solid fa-lock"></i></div>
-      <div class="levels" id="level-11"><i class="fa-solid fa-lock"></i></div>
-      <div class="levels" id="level-12"><i class="fa-solid fa-lock"></i></div>
-      <div class="levels" id="level-13"><i class="fa-solid fa-lock"></i></div>
-      <div class="levels" id="level-14"><i class="fa-solid fa-lock"></i></div>
+        <div class="levels actual-level pulse" id="level-2" @click="start">
+          2
+        </div>
+        <div class="levels" id="level-3"><i class="fa-solid fa-lock"></i></div>
+        <div class="levels" id="level-4"><i class="fa-solid fa-lock"></i></div>
+        <div class="levels" id="level-5"><i class="fa-solid fa-lock"></i></div>
+        <div class="levels" id="level-6"><i class="fa-solid fa-lock"></i></div>
+        <div class="levels" id="level-7"><i class="fa-solid fa-lock"></i></div>
+        <div class="levels" id="level-8"><i class="fa-solid fa-lock"></i></div>
+        <div class="levels" id="level-9"><i class="fa-solid fa-lock"></i></div>
+        <div class="levels" id="level-10"><i class="fa-solid fa-lock"></i></div>
+        <div class="levels" id="level-11"><i class="fa-solid fa-lock"></i></div>
+        <div class="levels" id="level-12"><i class="fa-solid fa-lock"></i></div>
+        <div class="levels" id="level-13"><i class="fa-solid fa-lock"></i></div>
+        <div class="levels" id="level-14"><i class="fa-solid fa-lock"></i></div>
       </div>
     </div>
   </div>
@@ -45,7 +47,7 @@ export default {
   data() {
     return {
       life: 20,
-      life_status: ""
+      life_status: "",
     };
   },
 
@@ -76,21 +78,20 @@ export default {
           this.life++;
           min = 0;
           sec = 10;
-        } 
+        }
 
         if (this.life < 20) {
-        this.life_status = timecounter;
+          this.life_status = timecounter;
         } else {
           setInterval(timer);
           this.life_status = "Max";
         }
-
       }, 1000);
     },
 
     start() {
-      console.log("Start level")
-    }
+      console.log("Start level");
+    },
   },
 };
 </script>
@@ -138,7 +139,7 @@ export default {
 .skin {
   width: 700px;
   height: 93vh;
-  background: rgba(0, 0, 0, .1);
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .levels {
@@ -146,13 +147,13 @@ export default {
   width: 60px;
   background: url("../assets/images/locked_level.png") no-repeat center;
   background-size: cover;
-  font-family: 'Emilys Candy', cursive;
+  font-family: "Emilys Candy", cursive;
   font-size: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #FFF8DC;
+  color: #fff8dc;
   cursor: pointer;
 }
 
@@ -174,8 +175,8 @@ export default {
 
 .pulse {
   transition: ease-in;
-  animation-duration: 0.5s; 
-  animation-timing-function: ease-in; 
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
   animation-delay: 0s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
@@ -287,5 +288,4 @@ export default {
   position: absolute;
   top: -15px;
 }
-
 </style>
