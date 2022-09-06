@@ -153,9 +153,6 @@ export default {
 .actual-level {
   background: url("../assets/images/actual_level.png") no-repeat center;
   background-size: cover;
-  position: absolute;
-  top: 600px;
-  left: 70px;
 }
 
 .pulse {
