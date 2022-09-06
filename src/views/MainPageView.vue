@@ -7,20 +7,20 @@
       <div class="body-right"></div>
     </div>
     <div class="map">
-      <div class="levels pulse" id="level-1" @click="start">1</div>
-      <div class="levels" id="level-2" @click="start"><i class="fa-solid fa-lock"></i></div>
-      <div class="levels" id="level-3" @click="start"><i class="fa-solid fa-lock"></i></div>
-      <div class="levels" id="level-4" @click="start"><i class="fa-solid fa-lock"></i></div>
-      <div class="levels" id="level-5" @click="start"><i class="fa-solid fa-lock"></i></div>
-      <div class="levels" id="level-6" @click="start"><i class="fa-solid fa-lock"></i></div>
-      <div class="levels" id="level-7" @click="start"><i class="fa-solid fa-lock"></i></div>
-      <div class="levels" id="level-8" @click="start"><i class="fa-solid fa-lock"></i></div>
-      <div class="levels" id="level-9" @click="start"><i class="fa-solid fa-lock"></i></div>
-      <div class="levels" id="level-10" @click="start"><i class="fa-solid fa-lock"></i></div>
-      <div class="levels" id="level-11" @click="start"><i class="fa-solid fa-lock"></i></div>
-      <div class="levels" id="level-12" @click="start"><i class="fa-solid fa-lock"></i></div>
-      <div class="levels" id="level-13" @click="start"><i class="fa-solid fa-lock"></i></div>
-      <div class="levels" id="level-14" @click="start"><i class="fa-solid fa-lock"></i></div>
+      <div class="levels" id="level-1" @click="start">1</div>
+      <div class="levels actual-level pulse" id="level-2" @click="start">2</div>
+      <div class="levels" id="level-3"><i class="fa-solid fa-lock"></i></div>
+      <div class="levels" id="level-4"><i class="fa-solid fa-lock"></i></div>
+      <div class="levels" id="level-5"><i class="fa-solid fa-lock"></i></div>
+      <div class="levels" id="level-6"><i class="fa-solid fa-lock"></i></div>
+      <div class="levels" id="level-7"><i class="fa-solid fa-lock"></i></div>
+      <div class="levels" id="level-8"><i class="fa-solid fa-lock"></i></div>
+      <div class="levels" id="level-9"><i class="fa-solid fa-lock"></i></div>
+      <div class="levels" id="level-10"><i class="fa-solid fa-lock"></i></div>
+      <div class="levels" id="level-11"><i class="fa-solid fa-lock"></i></div>
+      <div class="levels" id="level-12"><i class="fa-solid fa-lock"></i></div>
+      <div class="levels" id="level-13"><i class="fa-solid fa-lock"></i></div>
+      <div class="levels" id="level-14"><i class="fa-solid fa-lock"></i></div>
     </div>
   </div>
 </template>
@@ -145,6 +145,12 @@ export default {
 }
 
 #level-1 {
+  position: absolute;
+  top: 600px;
+  left: 70px;
+}
+
+.actual-level {
   background: url("../assets/images/actual_level.png") no-repeat center;
   background-size: cover;
   position: absolute;
