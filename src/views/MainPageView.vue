@@ -7,7 +7,11 @@
       <div class="body-right"></div>
     </div>
     <div class="map">
-      <div class="levels successed-level" id="level-1" @click="start">1</div>
+      <div class="skin">
+        <div class="levels successed-level" id="level-1" @click="start">
+        <div class="three-stars"></div>
+        1
+        </div>
       <div class="levels actual-level pulse" id="level-2" @click="start">2</div>
       <div class="levels" id="level-3"><i class="fa-solid fa-lock"></i></div>
       <div class="levels" id="level-4"><i class="fa-solid fa-lock"></i></div>
@@ -21,6 +25,8 @@
       <div class="levels" id="level-12"><i class="fa-solid fa-lock"></i></div>
       <div class="levels" id="level-13"><i class="fa-solid fa-lock"></i></div>
       <div class="levels" id="level-14"><i class="fa-solid fa-lock"></i></div>
+      </div>
+      
     </div>
   </div>
 </template>
@@ -130,6 +136,12 @@ export default {
   left: 450px;
 }
 
+.skin {
+  width: 700px;
+  height: 93vh;
+  background: rgba(0, 0, 0, .1);
+}
+
 .levels {
   height: 60px;
   width: 60px;
@@ -138,6 +150,7 @@ export default {
   font-family: 'Emilys Candy', cursive;
   font-size: 30px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #FFF8DC;
@@ -265,6 +278,15 @@ export default {
 .fa-lock {
   color: #4c4c4c;
   font-size: 16px;
+}
+
+.three-stars {
+  height: 30px;
+  width: 60px;
+  background: url("../assets/images/three_stars.png") no-repeat center;
+  background-size: cover;
+  position: absolute;
+  top: -15px;
 }
 
 </style>
