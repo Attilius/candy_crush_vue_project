@@ -226,7 +226,7 @@ export default {
 
 #level-10 {
   position: absolute;
-  top: 290px;
+  top: 285px;
   left: 350px;
 }
 
