@@ -26,7 +26,6 @@
       <div class="levels" id="level-13"><i class="fa-solid fa-lock"></i></div>
       <div class="levels" id="level-14"><i class="fa-solid fa-lock"></i></div>
       </div>
-      
     </div>
   </div>
 </template>
