@@ -3,7 +3,12 @@
     <Life :life="life" :life_status="life_status" />
     <Star />
     <Coins />
-    <audio
+    
+    <div>
+        <div class="sound" id="sound" @click="soundToggle">
+            <i class="fa-solid fa-volume-high"></i></div>
+        </div>
+        <audio
       ref="audio"
       src="@/assets/sounds/Longloop.mp3"
       preload
@@ -11,11 +16,6 @@
       id="audio"
       autoplay
     ></audio>
-    <div>
-        <div class="sound" id="sound" @click="soundToggle">
-            <i class="fa-solid fa-volume-high"></i></div>
-        </div>
-    
   </div>
 </template>
 
