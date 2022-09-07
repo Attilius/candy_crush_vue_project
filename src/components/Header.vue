@@ -14,7 +14,7 @@
     <div>
         <div class="sound" id="sound" @click="soundToggle">
             <i class="fa-solid fa-volume-high"></i></div>
-    </div>
+        </div>
     
   </div>
 </template>
