@@ -9,7 +9,7 @@
     <div class="map">
       <div class="skin">
         <div class="levels successed-level" id="level-1" @click="start">
-          <div class="stars three-stars"></div>
+          <div class="level-stars three-stars"></div>
           1
         </div>
         <div class="levels actual-level pulse" id="level-2" @click="start">
@@ -99,6 +99,9 @@ export default {
 <style>
 .main {
   width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .body {
@@ -280,7 +283,7 @@ export default {
   font-size: 16px;
 }
 
-.stars {
+.level-stars {
   height: 30px;
   width: 60px;
   position: absolute;
