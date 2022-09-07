@@ -290,7 +290,7 @@ export default {
   top: -15px;
 }
 
-.three-stars{
+.three-stars {
   background: url("../assets/images/three_stars.png") no-repeat center;
   background-size: cover;
 }
