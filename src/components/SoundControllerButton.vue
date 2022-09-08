@@ -15,7 +15,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+    name: "SoundButton"
+};
 </script>
 
 <style></style>
