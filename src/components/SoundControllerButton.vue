@@ -1,9 +1,9 @@
 <template>
   <div>
-      <div class="sound" id="sound" @click="soundToggle">
-        <i class="fa-solid fa-volume-high"></i>
-      </div>
-      <audio
+    <div class="sound" id="sound" @click="soundToggle">
+      <i class="fa-solid fa-volume-high"></i>
+    </div>
+    <audio
       ref="audio"
       src="@/assets/sounds/Longloop.mp3"
       preload
@@ -11,15 +11,11 @@
       id="audio"
       autoplay
     ></audio>
-    </div>
+  </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
-<style>
-
-</style>
+<style></style>
