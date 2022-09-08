@@ -51,4 +51,10 @@ export default {
   position: absolute;
   top: 10px;
   right: 40px;
-}</style>
+}
+
+.sound:active {
+  height: 38px;
+  width: 38px;
+}
+</style>
