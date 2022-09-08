@@ -36,4 +36,19 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.sound {
+  background: url("../assets/images/magenta_button.png") no-repeat center;
+  background-size: cover;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #fff8dc;
+  font-size: 18px;
+  position: absolute;
+  top: 10px;
+  right: 40px;
+}</style>
