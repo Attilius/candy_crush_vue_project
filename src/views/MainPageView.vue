@@ -83,7 +83,7 @@ export default {
         if (this.life < 20) {
           this.life_status = timecounter;
         } else {
-          setInterval(timer);
+          clearInterval(timer);
           this.life_status = "Max";
         }
       }, 1000);
