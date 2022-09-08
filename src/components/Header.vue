@@ -4,7 +4,6 @@
     <Star />
     <Coins />
     <SoundButton />
-
   </div>
 </template>
 
@@ -24,8 +23,6 @@ export default {
     Coins,
     SoundButton
   },
-
-  
 };
 </script>
 
@@ -45,8 +42,4 @@ export default {
   justify-content: space-around;
   align-items: center;
 }
-
-
-
-
 </style>
