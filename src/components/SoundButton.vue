@@ -16,7 +16,23 @@
 
 <script>
 export default {
-    name: "SoundButton"
+    name: "SoundButton",
+    
+    methods: {
+    soundToggle() {
+      const soundButton = document.getElementById("sound");
+      const play = '<i class="fa-solid fa-volume-high"></i>';
+      const mute = '<i class="fa-solid fa-volume-xmark"></i>';
+      const audio = document.getElementById("audio");
+      if (soundButton.innerHTML === play) {
+        soundButton.innerHTML = mute;
+        audio.pause();
+      } else {
+        soundButton.innerHTML = play;
+        audio.play();
+      }
+    },
+  },
 };
 </script>
 
