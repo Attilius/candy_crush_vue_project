@@ -299,4 +299,11 @@ export default {
   background: url("../assets/images/two_stars.png") no-repeat center;
   background-size: cover;
 }
+
+.one-star {
+  background-size: cover;
+}
+
+
+
 </style>
