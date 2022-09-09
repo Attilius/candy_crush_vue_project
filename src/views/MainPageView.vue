@@ -296,6 +296,7 @@ export default {
 }
 
 .two-stars {
+  background: url("../assets/images/two_stars.png") no-repeat center;
   background-size: cover;
 }
 </style>
