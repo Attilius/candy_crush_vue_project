@@ -54,5 +54,4 @@ export default {
     bottom: 2px;
     left: 35px;
 }
-
 </style>
