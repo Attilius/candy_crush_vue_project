@@ -294,4 +294,8 @@ export default {
   background: url("../assets/images/three_stars.png") no-repeat center;
   background-size: cover;
 }
+
+.two-stars {
+  background-size: cover;
+}
 </style>
