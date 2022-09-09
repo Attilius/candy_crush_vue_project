@@ -301,6 +301,7 @@ export default {
 }
 
 .one-star {
+  background: url("../assets/images/one_star.png") no-repeat center;
   background-size: cover;
 }
 
