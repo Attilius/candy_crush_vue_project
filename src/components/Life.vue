@@ -40,7 +40,7 @@ export default {
 #heart {
     height: 140%;
     width: 55%;
-    background: url("../assets/images/heart.png") no-repeat;
+    background: url("../assets/images/heart.png") no-repeat center;
     background-size: cover;
     font-family: 'Emilys Candy', cursive;
     font-size: 20px;
