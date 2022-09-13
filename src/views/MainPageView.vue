@@ -132,7 +132,7 @@ export default {
 .map {
   width: 700px;
   height: 93vh;
-  background: url("../assets/images/map.png") no-repeat center scro;
+  background: url("../assets/images/map.png") no-repeat center scr;
   background-size: cover;
   position: absolute;
   top: 52px;
