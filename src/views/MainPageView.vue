@@ -90,7 +90,7 @@ export default {
     },
 
     start() {
-      //console.log("Start 
+      //console.log("Start
       location.hash = '/level_1';
     },
   },
