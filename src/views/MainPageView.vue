@@ -93,8 +93,22 @@ export default {
     start(e) {
       //console.log(e.target.id.replace('-', '_'))
       //console.log(router.options.routes[1].name)
-      console.log(router.options.routes.length)
-      //location.hash = '/level_1';
+      //console.log(router.options.routes.length)
+      const routes = router.options.routes;
+      const levelName = e.target.id.replace("-", "_");
+      routes.forEach((item) => {
+        if (item.name === levelName) {
+          location.hash = `/${levelName}`;
+        } else {
+          routes.push({
+            path: `/${levelName}`,
+            name: levelName,
+            component: () =>
+              import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+          });
+          location.hash = `/${levelName}`;
+        }
+      });
     },
   },
 };
