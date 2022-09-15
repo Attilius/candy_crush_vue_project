@@ -90,7 +90,7 @@ export default {
     },
 
     start(e) {
-      console.log(e.target.id)
+      console.log(e.target.id.replace('-', '_'))
       //location.hash = '/level_1';
     },
   },
