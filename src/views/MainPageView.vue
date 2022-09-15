@@ -91,7 +91,6 @@ export default {
     },
 
     start(e) {
-      //console.log(e.target.id.replace('-', '_'))
       const routes = router.options.routes;
       const levelName = e.target.id.replace("-", "_");
       routes.forEach((item) => {
