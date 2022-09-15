@@ -89,8 +89,9 @@ export default {
       }, 1000);
     },
 
-    start() {
-      location.hash = '/level_1';
+    start(e) {
+      console.log(e.target)
+      //location.hash = '/level_1';
     },
   },
 };
