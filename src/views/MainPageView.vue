@@ -92,7 +92,7 @@ export default {
 
     start(e) {
       //console.log(e.target.id.replace('-', '_'))
-      console.log(router)
+      console.log(router.options)
       //location.hash = '/level_1';
     },
   },
