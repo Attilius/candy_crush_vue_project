@@ -36,6 +36,7 @@
 // @ is an alias to /src
 import Navbar from "@/components/Navbar.vue";
 import Header from "@/components/Header.vue";
+import router from "@/router/index.js";
 
 export default {
   name: "MainPage",
@@ -90,7 +91,8 @@ export default {
     },
 
     start(e) {
-      console.log(e.target.id.replace('-', '_'))
+      //console.log(e.target.id.replace('-', '_'))
+      console.log(router)
       //location.hash = '/level_1';
     },
   },
