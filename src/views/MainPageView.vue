@@ -103,7 +103,7 @@ export default {
             component: () =>
               import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
           });
-          //location.hash = `/${levelName}`;
+          location.hash = `/${levelName}`;
         }
       }
     },
