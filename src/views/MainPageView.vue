@@ -101,7 +101,7 @@ export default {
             path: `/${levelName}`,
             name: levelName,
             component: () =>
-              import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+              import(/* webpackChunkName: "" */ "../views/AboutView.vue"),
           });
           location.hash = `/${levelName}`;
         }
