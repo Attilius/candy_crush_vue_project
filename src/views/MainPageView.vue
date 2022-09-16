@@ -93,8 +93,9 @@ export default {
     start(e) {
       const routes = router.options.routes;
       const levelName = e.target.id.replace("-", "_");
-      routes.forEach((item) => {
-        if (item.name === levelName) {
+      for (let i = 1; i < routes.length; i++) {
+       
+        if (routes[i].name === levelName) {
           location.hash = `/${levelName}`;
         } else {
           routes.push({
@@ -103,9 +104,14 @@ export default {
             component: () =>
               import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
           });
-          location.hash = `/${levelName}`;
+          //location.hash = `/${levelName}`;
+          console.log('in else')
+          console.log(routes.length)
         }
-      });
+
+      }
+        
+    
     },
   },
 };
