@@ -94,7 +94,6 @@ export default {
       const routes = router.options.routes;
       const levelName = e.target.id.replace("-", "_");
       for (let i = 1; i < routes.length; i++) {
-       
         if (routes[i].name === levelName) {
           location.hash = `/${levelName}`;
         } else {
