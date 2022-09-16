@@ -104,7 +104,6 @@ export default {
               import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
           });
           //location.hash = `/${levelName}`;
-          console.log('in else')
         }
       }
     },
