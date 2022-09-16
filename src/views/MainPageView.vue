@@ -105,7 +105,6 @@ export default {
           });
           //location.hash = `/${levelName}`;
           console.log('in else')
-          console.log(routes.length)
         }
       }
     },
