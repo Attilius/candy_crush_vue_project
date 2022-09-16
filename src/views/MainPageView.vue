@@ -101,7 +101,7 @@ export default {
             path: `/${levelName}`,
             name: levelName,
             component: () =>
-              import(/**/ "../views/AboutView.vue"),
+              import("../views/AboutView.vue"),
           });
           location.hash = `/${levelName}`;
         }
