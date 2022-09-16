@@ -107,7 +107,6 @@ export default {
           console.log('in else')
           console.log(routes.length)
         }
-
       }
     },
   },
