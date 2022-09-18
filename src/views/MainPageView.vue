@@ -98,7 +98,6 @@ export default {
           location.hash = `/${levelName}`;
         } else {
           routes.push({
-            path: `/${levelName}`,
           });
         }
       }
