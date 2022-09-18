@@ -99,7 +99,6 @@ export default {
         } else {
           routes.push({
             path: `/${levelName}`,
-            name: levelName,
           });
         }
       }
