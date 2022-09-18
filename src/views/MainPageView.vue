@@ -101,7 +101,7 @@ export default {
             path: `/${levelName}`,
             name: levelName,
             component: () =>
-              import("../views/AboutView.vue"),
+              import("./GameBoard.vue"),
           });
           location.hash = `/${levelName}`;
         }
