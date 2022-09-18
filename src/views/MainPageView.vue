@@ -97,8 +97,6 @@ export default {
         if (routes[i].name === levelName) {
           location.hash = `/${levelName}`;
         } else {
-          routes.push({
-          });
         }
       }
     },
