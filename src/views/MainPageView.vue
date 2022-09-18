@@ -103,7 +103,6 @@ export default {
             component: () =>
               import("./GameBoard.vue"),
           });
-          location.hash = `/${levelName}`;
         }
       }
     },
