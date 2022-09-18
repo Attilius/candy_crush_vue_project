@@ -101,7 +101,7 @@ export default {
             path: `/${levelName}`,
             name: levelName,
             component: () =>
-              import("./GameBoard.vue"),
+              import(),
           });
         }
       }
