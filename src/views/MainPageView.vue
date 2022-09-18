@@ -100,8 +100,6 @@ export default {
           routes.push({
             path: `/${levelName}`,
             name: levelName,
-            component: () =>
-              import(),
           });
         }
       }
