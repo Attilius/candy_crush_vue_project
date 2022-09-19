@@ -36,4 +36,13 @@ export default {
   align-items: center;
   padding-top: 6px;
 }
+
+.moves {
+  background: rgb(70, 90, 122);
+  border-radius: 100px;
+  margin: 50px auto;
+  font-family: 'Emilys Candy', cursive;
+  color: #FFF8DC;
+  text-align: center;
+}
 </style>
