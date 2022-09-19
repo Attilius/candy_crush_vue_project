@@ -17,8 +17,9 @@ export default {
 
 <style>
 .game-board {
-  height: 99vh;
+  height: 97.9vh;
   width: 100%;
   background: url("../assets/images/background.jpg") no-repeat left;
+  background-position-x: 50%;
 }
 </style>
