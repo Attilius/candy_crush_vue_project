@@ -52,4 +52,14 @@ export default {
   color: #FFF8DC;
   text-align: center;
 }
+
+.movesTitle {
+  font-size: 30px;
+}
+
+.moves h1 {
+  margin: 0;
+  text-shadow: purple 1px 1px;
+  font-size: 30px;
+}
 </style>
