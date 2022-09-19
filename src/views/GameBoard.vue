@@ -1,9 +1,18 @@
 <template>
-  <div class="game-board"></div>
+  <div class="game-board">
+    <Navbar />
+  </div>
 </template>
 
 <script>
-export default {};
+import Navbar from "../components/Navbar.vue";
+
+export default {
+    name: "GameBoard",
+    components: {
+        Navbar
+    }
+};
 </script>
 
 <style>
