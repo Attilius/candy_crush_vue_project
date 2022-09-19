@@ -1,8 +1,11 @@
 <template>
   <div class="score-board">
     <div class="moves">
-        <h1 className="movesTitle">Moves</h1>
-        <h1>{{moves}}</h1>
+      <h1 className="movesTitle">Moves</h1>
+      <h1>{{ moves }}</h1>
+    </div>
+    <div className="score">
+      <h1>{{ score }}</h1>
     </div>
   </div>
 </template>
@@ -13,9 +16,10 @@ export default {
 
   data() {
     return {
-        moves: 20
-    }
-  }
+      moves: 20,
+      score: 0
+    };
+  },
 };
 </script>
 
@@ -48,8 +52,8 @@ export default {
   background: rgb(70, 90, 122);
   border-radius: 100px;
   margin: 50px auto;
-  font-family: 'Emilys Candy', cursive;
-  color: #FFF8DC;
+  font-family: "Emilys Candy", cursive;
+  color: #fff8dc;
   text-align: center;
 }
 
