@@ -1,16 +1,21 @@
 <template>
   <div class="game-board">
     <Navbar />
+    <div>
+        <ScoreBoard />
+    </div>
   </div>
 </template>
 
 <script>
 import Navbar from "../components/Navbar.vue";
+import ScoreBoard from "../components/ScoreBoard.vue";
 
 export default {
     name: "GameBoard",
     components: {
-        Navbar
+        Navbar,
+        ScoreBoard
     }
 };
 </script>
