@@ -1,10 +1,10 @@
 <template>
   <div class="score-board">
     <div class="moves">
-      <h1 className="movesTitle">Moves</h1>
+      <h1 class="movesTitle">Moves</h1>
       <h1>{{ moves }}</h1>
     </div>
-    <div className="score">
+    <div class="score">
       <h1>{{ score }}</h1>
     </div>
   </div>
@@ -48,7 +48,19 @@ export default {
   padding-top: 6px;
 }
 
-.moves {
+.movesTitle {
+  font-size: 30px;
+}
+
+.score {
+  width: 60%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.score, .moves {
   background: rgb(70, 90, 122);
   border-radius: 100px;
   margin: 50px auto;
@@ -57,11 +69,7 @@ export default {
   text-align: center;
 }
 
-.movesTitle {
-  font-size: 30px;
-}
-
-.moves h1 {
+.score h1, .moves h1 {
   margin: 0;
   text-shadow: purple 1px 1px;
   font-size: 30px;
