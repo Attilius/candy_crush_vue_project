@@ -1,7 +1,8 @@
 <template>
   <div class="score-board">
     <div class="moves">
-
+        <h1 className="movesTitle">Moves</h1>
+        <h1>{{moves}}</h1>
     </div>
   </div>
 </template>
@@ -9,6 +10,12 @@
 <script>
 export default {
   name: "ScoreBoard",
+
+  data() {
+    return {
+        moves: 20
+    }
+  }
 };
 </script>
 
