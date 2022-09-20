@@ -29,6 +29,11 @@ export default {
       bar: 100
     };
   },
+
+  mounted() {
+    const moves = document.getElementById('moves');
+
+  },
 };
 </script>
 
