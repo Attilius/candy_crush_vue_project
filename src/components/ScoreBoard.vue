@@ -38,6 +38,13 @@ export default {
         this.bar -= 4;
       });
   },
+
+  methods: {
+    actionBar() {
+      const bar = document.getElementById('score-action');
+
+    }
+  }
 };
 </script>
 
