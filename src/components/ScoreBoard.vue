@@ -43,6 +43,11 @@ export default {
     actionBar() {
       const bar = document.getElementById('score-action');
 
+      if (this.score > 0) {
+        bar.style.width = `${this.bar}%`;
+        bar.style.borderTopLeftRadius = 0;
+        bar.style.borderBottomLeftRadius = 0;
+      }
     }
   }
 };
