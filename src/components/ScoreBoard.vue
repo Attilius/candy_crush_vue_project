@@ -148,5 +148,6 @@ export default {
 #score-action {
   background: rgb(70, 90, 122);
   border-radius: 100px;
+  height: 100%;
 }
 </style>
