@@ -144,4 +144,9 @@ export default {
   top: 190px;
   left: 12px;
 }
+
+#score-action {
+  background: rgb(70, 90, 122);
+  border-radius: 100px;
+}
 </style>
