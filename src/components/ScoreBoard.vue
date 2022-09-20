@@ -150,5 +150,6 @@ export default {
   border-radius: 100px;
   height: 100%;
   width: 100%;
+  float: right;
 }
 </style>
