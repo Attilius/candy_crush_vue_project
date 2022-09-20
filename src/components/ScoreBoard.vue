@@ -112,4 +112,14 @@ export default {
   text-align: center;
   text-shadow: purple 1px 1px;
 }
+
+.score-bar {
+  width: 90%;
+  height: 20px;
+  background: linear-gradient(90deg, blue, lime);
+  border-radius: 100px;
+  position: absolute;
+  top: 190px;
+  left: 12px;
+}
 </style>
