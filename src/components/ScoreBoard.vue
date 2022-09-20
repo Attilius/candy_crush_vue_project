@@ -26,6 +26,7 @@ export default {
     return {
       moves: 20,
       score: 0,
+      bar: 100
     };
   },
 };
