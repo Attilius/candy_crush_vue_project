@@ -4,6 +4,9 @@
       <h1 class="movesTitle">Moves</h1>
       <h1>{{ moves }}</h1>
     </div>
+    <div class="score-bar">
+      <div id="score-action"></div>
+    </div>
     <div class="score">
       <h1>{{ score }}</h1>
     </div>
@@ -95,7 +98,7 @@ export default {
   background-size: cover;
   font-family: "Emilys Candy", cursive;
   font-size: 20px;
-  color: #FF00FF;
+  color: #ff00ff;
   display: flex;
   justify-content: center;
   flex-direction: column;
