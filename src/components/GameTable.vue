@@ -285,6 +285,20 @@ export default {
 
     dragDrop(e) {
         this.drag_drop = e.target;
+    },
+
+    dragEnd() {
+        const fromIndex = parseInt(this.drag_start.getAttribute('id')) - 1;
+        const toIndex = parseInt(this.drag_drop.getAttribute('id')) - 1;
+        const chosen_image = this.drag_start.getAttribute('src').split('/')[2];
+        const replaced_image = this.drag_drop.getAttribute('src').split('/')[2];
+        const chosen_alt = this.drag_start.getAttribute('alt');
+        const replaced_alt = this.drag_drop.getAttribute('alt');
+
+        this.candies[fromIndex].candy_image = replaced_image;
+        this.candies[toIndex].candy_image = chosen_image;
+        this.candies[fromIndex].alt = replaced_alt;
+        this.candies[toIndex].alt = chosen_alt;
     }
   }
 
