@@ -294,11 +294,21 @@ export default {
         const replaced_image = this.drag_drop.getAttribute('src').split('/')[2];
         const chosen_alt = this.drag_start.getAttribute('alt');
         const replaced_alt = this.drag_drop.getAttribute('alt');
+        const validMoves = [
+                fromIndex - 1,
+                fromIndex - 7,
+                fromIndex + 1,
+                fromIndex + 7
+            ];
+        const validMove = validMoves.includes(toIndex)
 
-        this.candies[fromIndex].candy_image = replaced_image;
-        this.candies[toIndex].candy_image = chosen_image;
-        this.candies[fromIndex].alt = replaced_alt;
-        this.candies[toIndex].alt = chosen_alt;
+        if (validMove) {
+            this.candies[fromIndex].candy_image = replaced_image;
+            this.candies[toIndex].candy_image = chosen_image;
+            this.candies[fromIndex].alt = replaced_alt;
+            this.candies[toIndex].alt = chosen_alt;
+        }
+        
     }
   }
 
