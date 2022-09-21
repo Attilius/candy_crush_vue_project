@@ -41,4 +41,11 @@ export default {
   left: 520px;
   top: 50px;
 }
+
+img {
+  width: 70px;
+  height: 70px;
+  border: 1px solid lightblue;
+  background-color: #465a7abf;
+}
 </style>
