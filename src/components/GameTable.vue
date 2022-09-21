@@ -281,6 +281,10 @@ export default {
   methods: {
     dragStart(e) {
         this.drag_start = e.target;
+    },
+
+    dragDrop(e) {
+        this.drag_drop = e.target;
     }
   }
 
