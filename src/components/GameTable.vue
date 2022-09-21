@@ -21,7 +21,262 @@
 
 <script>
 export default {
-  name: "GameTable"
+  name: "GameTable",
+
+  data() {
+    return {
+        candies: [
+            {
+                id : 1,
+                candy_image : "red.png",
+                alt : "red"
+            },
+            {
+                id : 2,
+                candy_image : "purple.png",
+                alt : "purple"
+            },
+            {
+                id : 3,
+                candy_image : "yellow.png",
+                alt : "yellow"
+            },
+            {
+                id : 4,
+                candy_image : "blue.png",
+                alt : "blue"
+            },
+            {
+                id : 5,
+                candy_image : "yellow.png",
+                alt : "yellow"
+            },
+            {
+                id : 6,
+                candy_image : "yellow.png",
+                alt : "yellow"
+            },
+            {
+                id : 7,
+                candy_image : "red.png",
+                alt : "red"
+            },
+            {
+                id : 8,
+                candy_image : "",
+                alt : ""
+            },
+            {
+                id : 9,
+                candy_image : "purple.png",
+                alt : "purple"
+            },
+            {
+                id : 10,
+                candy_image : "yellow.png",
+                alt : "yellow"
+            },
+            {
+                id : 11,
+                candy_image : "green.png",
+                alt : "green"
+            },
+            {
+                id : 12,
+                candy_image : "blue.png",
+                alt : "blue"
+            },
+            {
+                id : 13,
+                candy_image : "blue.png",
+                alt : "blue"
+            },
+            {
+                id : 14,
+                candy_image : "",
+                alt : ""
+            },
+            {
+                id : 15,
+                candy_image : "green.png",
+                alt : "green"
+            },
+            {
+                id : 16,
+                candy_image : "green.png",
+                alt : "green"
+            },
+            {
+                id : 17,
+                candy_image : "blue.png",
+                alt : "blue"
+            },
+            {
+                id : 18,
+                candy_image : "red.png",
+                alt : "red"
+            },
+            {
+                id : 19,
+                candy_image : "yellow.png",
+                alt : "yellow"
+            },
+            {
+                id : 20,
+                candy_image : "purple.png",
+                alt : "purple"
+            },
+            {
+                id : 21,
+                candy_image : "yellow.png",
+                alt : "yellow"
+            },
+            {
+                id : 22,
+                candy_image : "green.png",
+                alt : "green"
+            },
+            {
+                id : 23,
+                candy_image : "yellow.png",
+                alt : "yellow"
+            },
+            {
+                id : 24,
+                candy_image : "red.png",
+                alt : "red"
+            },
+            {
+                id : 25,
+                candy_image : "blue.png",
+                alt : "blue"
+            },
+            {
+                id : 26,
+                candy_image : "red.png",
+                alt : "red"
+            },
+            {
+                id : 27,
+                candy_image : "blue.png",
+                alt : "blue"
+            },
+            {
+                id : 28,
+                candy_image : "purple.png",
+                alt : "purple"
+            },
+            {
+                id : 29,
+                candy_image : "yellow.png",
+                alt : "yellow"
+            },
+            {
+                id : 30,
+                candy_image : "yellow.png",
+                alt : "yellow"
+            },
+            {
+                id : 31,
+                candy_image : "purple.png",
+                alt : "purple"
+            },
+            {
+                id : 32,
+                candy_image : "green.png",
+                alt : "green"
+            },
+            {
+                id : 33,
+                candy_image : "purple.png",
+                alt : "purple"
+            },
+            {
+                id : 34,
+                candy_image : "yellow.png",
+                alt : "yellow"
+            },
+            {
+                id : 35,
+                candy_image : "green.png",
+                alt : "green"
+            },
+            {
+                id : 36,
+                candy_image : "",
+                alt : ""
+            },
+            {
+                id : 37,
+                candy_image : "green.png",
+                alt : "green"
+            },
+            {
+                id : 38,
+                candy_image : "green.png",
+                alt : "green"
+            },
+            {
+                id : 39,
+                candy_image : "yellow.png",
+                alt : "yellow"
+            },
+            {
+                id : 40,
+                candy_image : "yellow.png",
+                alt : "yellow"
+            },
+            {
+                id : 41,
+                candy_image : "green.png",
+                alt : "green"
+            },
+            {
+                id : 42,
+                candy_image : "",
+                alt : ""
+            },
+            {
+                id : 43,
+                candy_image : "red.png",
+                alt : "red"
+            },
+            {
+                id : 44,
+                candy_image : "blue.png",
+                alt : "blue"
+            },
+            {
+                id : 45,
+                candy_image : "purple.png",
+                alt : "purple"
+            },
+            {
+                id : 46,
+                candy_image : "green.png",
+                alt : "green"
+            },
+            {
+                id : 47,
+                candy_image : "purple.png",
+                alt : "purple"
+            },
+            {
+                id : 48,
+                candy_image : "yellow.png",
+                alt : "yellow"
+            },
+            {
+                id : 49,
+                candy_image : "red.png",
+                alt : "red"
+            },
+        ],
+
+        drag_start : '',
+        drag_drop : ''
+    }
+  },
 
 };
 </script>
