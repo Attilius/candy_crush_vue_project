@@ -27,5 +27,18 @@ export default {
 </script>
 
 <style>
-
+#game-table {
+  width: 505px;
+  height: 505px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  margin-top: 100px;
+  border-radius: 8px;
+  position: absolute;
+  left: 520px;
+  top: 50px;
+}
 </style>
