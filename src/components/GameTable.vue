@@ -278,6 +278,12 @@ export default {
     }
   },
 
+  methods: {
+    dragStart(e) {
+        this.drag_start = e.target;
+    }
+  }
+
 };
 </script>
 
