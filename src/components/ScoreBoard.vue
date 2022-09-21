@@ -1,6 +1,6 @@
 <template>
   <div class="score-board">
-    <div class="moves" id="moves">
+    <div class="moves" id="moves" @click="actionBar">
       <h1 class="movesTitle">Moves</h1>
       <h1>{{ moves }}</h1>
     </div>
