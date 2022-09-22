@@ -139,10 +139,7 @@ export default {
 
       if (notValid.includes(i)) continue;
 
-      if (rowOfFour.every(square => this.$store.state.candies[square].image === decidedColor && !isBlank)) {
-        rowOfFour.forEach(square => this.$store.state.candies[square].image = blank);
-        return true;
-      }
+      this.itemRemover(rowOfFour, decidedColor, isBlank);
     }
   },
 
