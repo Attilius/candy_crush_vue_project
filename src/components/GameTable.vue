@@ -90,6 +90,13 @@ export default {
     }
   },
 
+  itemRemover(matchingArray, decidedColor, isBlank) {
+    if (matchingArray.every(square => this.$store.state.candies[square].image === decidedColor && !isBlank)) {
+        matchingArray.forEach(square => this.$store.state.candies[square].image = "blank.png");
+        return true;
+      }
+  },
+
   checkForColumnOfFive() {
     for (let i = 0; i <= 21; i++) {
       const columnOfFive = [i, i + 7, i + 7 * 2, i + 7 * 3, i + 7 * 4];
@@ -163,10 +170,7 @@ export default {
 
       if (notValid.includes(i)) continue;
 
-      if (rowOfThree.every(square => this.$store.state.candies[square].image === decidedColor && !isBlank)) {
-        rowOfThree.forEach(square => this.$store.state.candies[square].image = blank);
-        return true;
-      }
+      this.itemRemover(rowOfThree, decidedColor, isBlank);
     }
   },
 
