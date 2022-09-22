@@ -90,6 +90,20 @@ export default {
     }
   },
 
+  checkForColumnOfFive() {
+    for (let i = 0; i <= 21; i++) {
+      const columnOfFive = [i, i + 7, i + 7 * 2, i + 7 * 3, i + 7 * 4];
+      const decidedColor = this.$store.state.candies[i].image;
+      const blank = "blank.png";
+      const isBlank = this.$store.state.candies[i].image === blank;
+
+      if (columnOfFive.every(square => this.$store.state.candies[square].image === decidedColor && !isBlank)) {
+        columnOfFive.forEach(square => this.$store.state.candies[square].image = blank);
+        return true;
+      }
+    }
+  },
+
   checkForRowOfFive() {
     for (let i = 0; i < 48; i++) {
       const rowOfFive = [i, i + 1, i + 2, i + 3, i + 4];
@@ -186,6 +200,7 @@ export default {
   watch: {
     '$store.state.candies' : {
         handler() {
+            this.checkForColumnOfFive();
             this.checkForRowOfFive();
             this.checkForColumnOfFour();
             this.checkForRowOfFour();
