@@ -104,10 +104,7 @@ export default {
       const blank = "blank.png";
       const isBlank = this.$store.state.candies[i].image === blank;
 
-      if (columnOfFive.every(square => this.$store.state.candies[square].image === decidedColor && !isBlank)) {
-        columnOfFive.forEach(square => this.$store.state.candies[square].image = blank);
-        return true;
-      }
+      this.itemRemover(columnOfFive, decidedColor, isBlank);
     }
   },
 
@@ -122,10 +119,7 @@ export default {
 
       if (notValid.includes(i)) continue;
 
-      if (rowOfFive.every(square => this.$store.state.candies[square].image === decidedColor && !isBlank)) {
-        rowOfFive.forEach(square => this.$store.state.candies[square].image = blank);
-        return true;
-      }
+      this.itemRemover(rowOfFive, decidedColor, isBlank);
     }
   },
 
