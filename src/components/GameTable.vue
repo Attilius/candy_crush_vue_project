@@ -1,12 +1,13 @@
 <template>
   <div id="game-table">
-    <img v-for="candy in candies" :key="candy.id"
-        :src="'/img/' + candy.candy_image"
+    <img v-for="candy in $store.state.candies" :key="candy.id"
+        :src="'/img/' + candy.image"
         :alt="candy.alt"
         :id="candy.id"
         :style="{
-            background : candy.candy_image === '' ? 'transparent' : '#465a7abf',
-            visibility : candy.candy_image === '' ? 'hidden' : 'visible'
+            background : candy.image === '' ? 'transparent' : '#465a7abf',
+            visibility : candy.image === '' ? 'hidden' : 'visible',
+            display: candy.image === null ? 'none' : 'flex'
             }"
         :draggable="true"
         @dragover="(e) => e.preventDefault()"
@@ -20,259 +21,13 @@
 </template>
 
 <script>
+import candyColors from "../static/candyColors.js";
+
 export default {
   name: "GameTable",
 
   data() {
     return {
-        candies: [
-            {
-                id : 1,
-                candy_image : "red.png",
-                alt : "red"
-            },
-            {
-                id : 2,
-                candy_image : "purple.png",
-                alt : "purple"
-            },
-            {
-                id : 3,
-                candy_image : "yellow.png",
-                alt : "yellow"
-            },
-            {
-                id : 4,
-                candy_image : "blue.png",
-                alt : "blue"
-            },
-            {
-                id : 5,
-                candy_image : "yellow.png",
-                alt : "yellow"
-            },
-            {
-                id : 6,
-                candy_image : "yellow.png",
-                alt : "yellow"
-            },
-            {
-                id : 7,
-                candy_image : "red.png",
-                alt : "red"
-            },
-            {
-                id : 8,
-                candy_image : "",
-                alt : ""
-            },
-            {
-                id : 9,
-                candy_image : "purple.png",
-                alt : "purple"
-            },
-            {
-                id : 10,
-                candy_image : "yellow.png",
-                alt : "yellow"
-            },
-            {
-                id : 11,
-                candy_image : "green.png",
-                alt : "green"
-            },
-            {
-                id : 12,
-                candy_image : "blue.png",
-                alt : "blue"
-            },
-            {
-                id : 13,
-                candy_image : "blue.png",
-                alt : "blue"
-            },
-            {
-                id : 14,
-                candy_image : "",
-                alt : ""
-            },
-            {
-                id : 15,
-                candy_image : "green.png",
-                alt : "green"
-            },
-            {
-                id : 16,
-                candy_image : "green.png",
-                alt : "green"
-            },
-            {
-                id : 17,
-                candy_image : "blue.png",
-                alt : "blue"
-            },
-            {
-                id : 18,
-                candy_image : "red.png",
-                alt : "red"
-            },
-            {
-                id : 19,
-                candy_image : "yellow.png",
-                alt : "yellow"
-            },
-            {
-                id : 20,
-                candy_image : "purple.png",
-                alt : "purple"
-            },
-            {
-                id : 21,
-                candy_image : "yellow.png",
-                alt : "yellow"
-            },
-            {
-                id : 22,
-                candy_image : "green.png",
-                alt : "green"
-            },
-            {
-                id : 23,
-                candy_image : "yellow.png",
-                alt : "yellow"
-            },
-            {
-                id : 24,
-                candy_image : "red.png",
-                alt : "red"
-            },
-            {
-                id : 25,
-                candy_image : "blue.png",
-                alt : "blue"
-            },
-            {
-                id : 26,
-                candy_image : "red.png",
-                alt : "red"
-            },
-            {
-                id : 27,
-                candy_image : "blue.png",
-                alt : "blue"
-            },
-            {
-                id : 28,
-                candy_image : "purple.png",
-                alt : "purple"
-            },
-            {
-                id : 29,
-                candy_image : "yellow.png",
-                alt : "yellow"
-            },
-            {
-                id : 30,
-                candy_image : "yellow.png",
-                alt : "yellow"
-            },
-            {
-                id : 31,
-                candy_image : "purple.png",
-                alt : "purple"
-            },
-            {
-                id : 32,
-                candy_image : "green.png",
-                alt : "green"
-            },
-            {
-                id : 33,
-                candy_image : "purple.png",
-                alt : "purple"
-            },
-            {
-                id : 34,
-                candy_image : "yellow.png",
-                alt : "yellow"
-            },
-            {
-                id : 35,
-                candy_image : "green.png",
-                alt : "green"
-            },
-            {
-                id : 36,
-                candy_image : "",
-                alt : ""
-            },
-            {
-                id : 37,
-                candy_image : "green.png",
-                alt : "green"
-            },
-            {
-                id : 38,
-                candy_image : "green.png",
-                alt : "green"
-            },
-            {
-                id : 39,
-                candy_image : "yellow.png",
-                alt : "yellow"
-            },
-            {
-                id : 40,
-                candy_image : "yellow.png",
-                alt : "yellow"
-            },
-            {
-                id : 41,
-                candy_image : "green.png",
-                alt : "green"
-            },
-            {
-                id : 42,
-                candy_image : "",
-                alt : ""
-            },
-            {
-                id : 43,
-                candy_image : "red.png",
-                alt : "red"
-            },
-            {
-                id : 44,
-                candy_image : "blue.png",
-                alt : "blue"
-            },
-            {
-                id : 45,
-                candy_image : "purple.png",
-                alt : "purple"
-            },
-            {
-                id : 46,
-                candy_image : "green.png",
-                alt : "green"
-            },
-            {
-                id : 47,
-                candy_image : "purple.png",
-                alt : "purple"
-            },
-            {
-                id : 48,
-                candy_image : "yellow.png",
-                alt : "yellow"
-            },
-            {
-                id : 49,
-                candy_image : "red.png",
-                alt : "red"
-            },
-        ],
-
         drag_start : '',
         drag_drop : ''
     }
@@ -303,12 +58,89 @@ export default {
         const validMove = validMoves.includes(toIndex)
 
         if (validMove) {
-            this.candies[fromIndex].candy_image = replaced_image;
-            this.candies[toIndex].candy_image = chosen_image;
-            this.candies[fromIndex].alt = replaced_alt;
-            this.candies[toIndex].alt = chosen_alt;
+            this.$store.state.candies[fromIndex].image = replaced_image;
+            this.$store.state.candies[toIndex].image = chosen_image;
+            this.$store.state.candies[fromIndex].alt = replaced_alt;
+            this.$store.state.candies[toIndex].alt = chosen_alt;
         }
-        
+    },
+
+    moveIntoSquareBelow() {
+    for (let i = 0; i <= 48; i++) {
+      const firstRow = [0, 1, 2, 3, 4, 5, 6];
+      const isFirstRow = firstRow.includes(i);
+      const fixedFields = [7, 13, 35, 41];
+      const isFixedField = fixedFields.includes(i);
+      const blank = "blank.png";
+
+      if (isFirstRow && this.$store.state.candies[i].image === blank || this.$store.state.candies[i].image === blank) {
+        let randomNumber = Math.floor(Math.random() * candyColors.length);
+        this.$store.state.candies[i].image = candyColors[randomNumber].src;
+        this.$store.state.candies[i].alt = candyColors[randomNumber].alt;
+      }
+
+      try {
+        if (this.$store.state.candies[i + 7].image === blank && !isFixedField) {
+            this.$store.state.candies[i + 7].image = this.$store.state.candies[i].image;
+            this.$store.state.candies[i + 7].alt = this.$store.state.candies[i].alt;
+            this.$store.state.candies[i].image = blank;
+            this.$store.state.candies[i].alt = "blank";
+        }
+      } catch {}
+    }
+  },
+
+    checkForRowOfThree() {
+    for (let i = 0; i < 48; i++) {
+      const rowOfThree = [i, i + 1, i + 2];
+      const decidedColor = this.$store.state.candies[i].image;
+      const notValid = [5, 6, 7, 11, 12, 13, 19, 20, 26, 27, 33, 34, 35, 39, 40, 41, 47, 48];
+      const blank = "blank.png";
+      const isBlank = this.$store.state.candies[i].image === blank;
+
+      if (notValid.includes(i)) continue;
+
+      if (rowOfThree.every(square => this.$store.state.candies[square].image === decidedColor && !isBlank)) {
+        rowOfThree.forEach(square => this.$store.state.candies[square].image = blank);
+        return true;
+      }
+    }
+  },
+
+ checkForColumnOfThree () {
+    for (let i = 0; i <= 35; i++) {
+      const columnOfThree = [i, i + 7, i + 7 * 2];
+      const decidedColor = this.$store.state.candies[i].image;
+      const blank = "blank.png";
+      const isBlank = this.$store.state.candies[i] === blank;
+
+      if (columnOfThree.every(square => this.$store.state.candies[square].image === decidedColor && !isBlank)) {
+        columnOfThree.forEach(square => this.$store.state.candies[square].image = blank);
+        return true;
+      }
+    }
+  },
+
+  },
+
+  mounted() {
+    setInterval(()=> {
+        if (this.$store.state.candies.image !== null) {
+            this.$store.state.candies.push({image: null})
+        } else {
+            this.$store.state.candies.pop({image: null})
+        }
+        this.moveIntoSquareBelow();
+    }, 100);
+  },
+
+  watch: {
+    '$store.state.candies' : {
+        handler() {
+        this.checkForRowOfThree();
+        this.checkForColumnOfThree();
+      },
+      immediate: true
     }
   }
 
