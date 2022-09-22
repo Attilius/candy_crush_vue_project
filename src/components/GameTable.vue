@@ -181,10 +181,7 @@ export default {
       const blank = "blank.png";
       const isBlank = this.$store.state.candies[i] === blank;
 
-      if (columnOfThree.every(square => this.$store.state.candies[square].image === decidedColor && !isBlank)) {
-        columnOfThree.forEach(square => this.$store.state.candies[square].image = blank);
-        return true;
-      }
+      this.itemRemover(columnOfThree, decidedColor, isBlank);
     }
   },
 
