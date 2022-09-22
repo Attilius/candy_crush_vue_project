@@ -148,15 +148,12 @@ export default {
 
   checkForColumnOfFour() {
     for (let i = 0; i <= 28; i++) {
-      const columnOfThree = [i, i + 7, i + 7 * 2, i + 7 * 3];
+      const columnOfFour = [i, i + 7, i + 7 * 2, i + 7 * 3];
       const decidedColor = this.$store.state.candies[i].image;
       const blank = "blank.png";
       const isBlank = this.$store.state.candies[i].image === blank;
 
-      if (columnOfThree.every(square => this.$store.state.candies[square].image === decidedColor && !isBlank)) {
-        columnOfThree.forEach(square => this.$store.state.candies[square].image = blank);
-        return true;
-      }
+      this.itemRemover(columnOfFour, decidedColor, isBlank);
     }
   },
 
