@@ -65,6 +65,8 @@ export default {
         this.$store.state.candies[fromIndex].alt = replaced_alt;
         this.$store.state.candies[toIndex].alt = chosen_alt;
       }
+
+      this.setMoves();
     },
 
     moveIntoSquareBelow() {
@@ -182,7 +184,11 @@ export default {
     },
 
     setScore(score) {
-      this.$emit('update', score);
+      this.$emit('updateScore', score);
+    },
+
+    setMoves() {
+      this.$emit('decrementMoves', 1)
     }
   },
 
