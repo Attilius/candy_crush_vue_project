@@ -31,7 +31,7 @@ export default {
   data() {
     return {
       drag_start: "",
-      drag_drop: "",
+      drag_drop: ""
     };
   },
 
@@ -100,13 +100,9 @@ export default {
       }
     },
 
-    itemRemover(matchingArray, decidedColor, isBlank) {
-      if (
-        matchingArray.every(
-          (square) =>
-            this.$store.state.candies[square].image === decidedColor && !isBlank
-        )
-      ) {
+    itemRemover(matchingArray, decidedColor, score) {
+      if ( matchingArray.every((square) => this.$store.state.candies[square].image === decidedColor)) {
+        if (matchingArray.every((square) => this.$store.state.candies[square].image !== "blank.png")) this.setScore(score);
         matchingArray.forEach(
           (square) => (this.$store.state.candies[square].image = "blank.png")
         );
@@ -118,10 +114,8 @@ export default {
       for (let i = 0; i <= 21; i++) {
         const columnOfFive = [i, i + 7, i + 7 * 2, i + 7 * 3, i + 7 * 4];
         const decidedColor = this.$store.state.candies[i].image;
-        const blank = "blank.png";
-        const isBlank = this.$store.state.candies[i].image === blank;
 
-        this.itemRemover(columnOfFive, decidedColor, isBlank);
+        this.itemRemover(columnOfFive, decidedColor, 50)
       }
     },
 
@@ -133,12 +127,10 @@ export default {
           3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 17, 18, 19, 20, 24, 25, 26, 27, 31,
           32, 33, 34, 35, 37, 38, 39, 40, 41, 45, 46, 47, 48,
         ];
-        const blank = "blank.png";
-        const isBlank = this.$store.state.candies[i].image === blank;
 
         if (notValid.includes(i)) continue;
 
-        this.itemRemover(rowOfFive, decidedColor, isBlank);
+        this.itemRemover(rowOfFive, decidedColor, 50)
       }
     },
 
@@ -150,12 +142,10 @@ export default {
           4, 5, 6, 7, 10, 11, 12, 13, 18, 19, 20, 25, 26, 27, 32, 33, 34, 35,
           38, 39, 40, 41, 46, 47, 48,
         ];
-        const blank = "blank.png";
-        const isBlank = this.$store.state.candies[i].image === blank;
 
         if (notValid.includes(i)) continue;
 
-        this.itemRemover(rowOfFour, decidedColor, isBlank);
+        this.itemRemover(rowOfFour, decidedColor, 40)
       }
     },
 
@@ -163,10 +153,8 @@ export default {
       for (let i = 0; i <= 28; i++) {
         const columnOfFour = [i, i + 7, i + 7 * 2, i + 7 * 3];
         const decidedColor = this.$store.state.candies[i].image;
-        const blank = "blank.png";
-        const isBlank = this.$store.state.candies[i].image === blank;
 
-        this.itemRemover(columnOfFour, decidedColor, isBlank);
+        this.itemRemover(columnOfFour, decidedColor, 40)
       }
     },
 
@@ -177,12 +165,10 @@ export default {
         const notValid = [
           5, 6, 7, 11, 12, 13, 19, 20, 26, 27, 33, 34, 35, 39, 40, 41, 47, 48,
         ];
-        const blank = "blank.png";
-        const isBlank = this.$store.state.candies[i].image === blank;
 
         if (notValid.includes(i)) continue;
 
-        this.itemRemover(rowOfThree, decidedColor, isBlank);
+        this.itemRemover(rowOfThree, decidedColor, 30)
       }
     },
 
@@ -190,12 +176,14 @@ export default {
       for (let i = 0; i <= 35; i++) {
         const columnOfThree = [i, i + 7, i + 7 * 2];
         const decidedColor = this.$store.state.candies[i].image;
-        const blank = "blank.png";
-        const isBlank = this.$store.state.candies[i] === blank;
 
-        this.itemRemover(columnOfThree, decidedColor, isBlank);
+        this.itemRemover(columnOfThree, decidedColor, 30)
       }
     },
+
+    setScore(score) {
+      this.$emit('update', score);
+    }
   },
 
   mounted() {
