@@ -7,7 +7,7 @@
         :style="{
             background : candy.image === '' ? 'transparent' : '#465a7abf',
             visibility : candy.image === '' ? 'hidden' : 'visible',
-            display: candy.image === null ? 'none' : 'flex'
+            display: candy.image === 'null.png' ? 'none' : 'block'
             }"
         :draggable="true"
         @dragover="(e) => e.preventDefault()"
@@ -177,10 +177,12 @@ export default {
 
   mounted() {
     setInterval(()=> {
-        if (this.$store.state.candies.image !== null) {
-            this.$store.state.candies.push({image: null})
+        const lastIndex = this.$store.state.candies.length - 1;
+
+        if (this.$store.state.candies[lastIndex].image !== 'null.png') {
+            this.$store.state.candies.push({image: 'null.png'})
         } else {
-            this.$store.state.candies.pop({image: null})
+            this.$store.state.candies.pop()
         }
         this.moveIntoSquareBelow();
     }, 100);
@@ -206,7 +208,7 @@ export default {
 <style>
 #game-table {
   width: 505px;
-  height: 505px;
+  height: 504px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
