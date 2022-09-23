@@ -7,6 +7,7 @@
         @updateScore="(setScore) => (score += setScore)"
         @decrementMoves="(setMoves) => (moves -= setMoves)"
       />
+      <SugarCrush :visibility="visibility" />
     </div>
   </div>
 </template>
@@ -15,6 +16,7 @@
 import Navbar from "../components/Navbar.vue";
 import ScoreBoard from "../components/ScoreBoard.vue";
 import GameTable from "../components/GameTable.vue";
+import SugarCrush from "../components/SugarCrush.vue";
 
 export default {
   name: "GameBoard",
@@ -22,14 +24,25 @@ export default {
     Navbar,
     ScoreBoard,
     GameTable,
+    SugarCrush
   },
 
   data() {
     return {
       moves: 20,
       score: 0,
+      visibility: 'hidden'
     };
   },
+
+  watch: {
+    score(newValue, oldValue) {
+      if (newValue >= 500) {
+        this.visibility = 'visible';
+      }
+    }
+  }
+
 };
 </script>
 
