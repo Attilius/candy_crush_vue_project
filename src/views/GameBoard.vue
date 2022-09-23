@@ -2,7 +2,7 @@
   <div class="game-board">
     <Navbar />
     <div>
-        <ScoreBoard />
+        <ScoreBoard :moves="moves" :score="score" />
         <GameTable />
     </div>
   </div>
@@ -19,6 +19,13 @@ export default {
         Navbar,
         ScoreBoard,
         GameTable
+    },
+
+    data() {
+      return {
+        moves: 20,
+        score: 0
+      }
     }
 };
 </script>
