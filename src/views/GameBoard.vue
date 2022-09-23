@@ -3,7 +3,7 @@
     <Navbar />
     <div>
         <ScoreBoard :moves="moves" :score="score" />
-        <GameTable />
+        <GameTable @update="(setScore) => score += setScore" />
     </div>
   </div>
 </template>
