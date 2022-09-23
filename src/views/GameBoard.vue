@@ -2,11 +2,11 @@
   <div class="game-board">
     <Navbar />
     <div>
-        <ScoreBoard :moves="moves" :score="score" />
-        <GameTable 
-        @updateScore="(setScore) => score += setScore" 
-        @decrementMoves="(setMoves) => moves -= setMoves"
-        />
+      <ScoreBoard :moves="moves" :score="score" />
+      <GameTable
+        @updateScore="(setScore) => (score += setScore)"
+        @decrementMoves="(setMoves) => (moves -= setMoves)"
+      />
     </div>
   </div>
 </template>
@@ -17,19 +17,19 @@ import ScoreBoard from "../components/ScoreBoard.vue";
 import GameTable from "../components/GameTable.vue";
 
 export default {
-    name: "GameBoard",
-    components: {
-        Navbar,
-        ScoreBoard,
-        GameTable
-    },
+  name: "GameBoard",
+  components: {
+    Navbar,
+    ScoreBoard,
+    GameTable,
+  },
 
-    data() {
-      return {
-        moves: 20,
-        score: 0
-      }
-    }
+  data() {
+    return {
+      moves: 20,
+      score: 0,
+    };
+  },
 };
 </script>
 
