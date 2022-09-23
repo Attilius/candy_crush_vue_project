@@ -21,11 +21,10 @@
 <script>
 export default {
   name: "ScoreBoard",
+  props: ['moves', 'score'],
 
   data() {
     return {
-      moves: 20,
-      score: 0,
       bar: 100
     };
   },
