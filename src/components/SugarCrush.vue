@@ -35,6 +35,6 @@ export default {
   color: #fff8dc;
   text-shadow: -3px 0 red, 0 3px red, 3px 0 red, 0 -3px red;
   font-family: "Emilys Candy", cursive;
-  font-size: 67px;
+  font-size: 65px;
 }
 </style>
