@@ -2,6 +2,9 @@
   <div class="back" :style="{visibility: visibility}">
     <div class="levelEndCover">
       <h1 id="level">Level 1</h1>
+      <div class="exit" id="exit" @click="backToMain">
+      <i class="fa-solid fa-xmark"></i>
+    </div>
       <h2>You lose!</h2>
       <div class="lose">
         <h2 class="loseLife">-1</h2>
@@ -21,7 +24,13 @@
 <script>
 export default {
   name: "LevelEndBoard",
-  props: ['visibility']
+  props: ['visibility'],
+
+  methods: {
+    backToMain() {
+        location.href = "/"
+    }
+  }
 };
 </script>
 
@@ -98,5 +107,28 @@ export default {
   font-size: 30px !important;
   position: relative;
   left: 20px;
+}
+
+.exit {
+  background: url("../assets/images/magenta_button.png") no-repeat center;
+  background-size: cover;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #fff8dc;
+  font-size: 33px;
+  font-weight: 700;
+  text-shadow: -1px 0 firebrick, 0 1px firebrick, 1px 0 firebrick, 0 -1px firebrick;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.exit:active {
+  height: 48px;
+  width: 48px;
 }
 </style>
