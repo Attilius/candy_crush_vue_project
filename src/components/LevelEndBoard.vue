@@ -1,5 +1,5 @@
 <template>
-  <div class="back" :style="{visibility: visibility}">
+  <div class="back" :style="{ visibility:visibility }">
     <div class="levelEndCover">
       <h1 id="level">Level 1</h1>
       <div class="exit" id="exit" @click="backToMain">
@@ -15,7 +15,7 @@
         />
       </div>
       <div class="buttonGroup">
-        <div class="again">Retry</div>
+        <div class="again" @click="retryLevel">Retry</div>
       </div>
     </div>
   </div>
@@ -29,6 +29,10 @@ export default {
   methods: {
     backToMain() {
         location.href = "/"
+    },
+
+    retryLevel() {
+        location.reload();
     }
   }
 };
@@ -43,7 +47,7 @@ export default {
   left: 515px;
   top: 145px;
   border-radius: 20px;
-  visibility: hidden;
+  visibility: visible;
 }
 .levelEndCover {
   height: 515px;
@@ -130,5 +134,27 @@ export default {
 .exit:active {
   height: 48px;
   width: 48px;
+}
+
+.again {
+  background: url("../assets/images/green_long_button.png") no-repeat center;
+  background-size: cover;
+  height: 70px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #fff8dc;
+  font-size: 33px;
+  font-weight: 700;
+  text-shadow: -2px 0 firebrick, 0 2px firebrick, 2px 0 firebrick, 0 -2px firebrick;
+  position: absolute;
+  bottom: 50px;
+}
+
+.again:active {
+  height: 68px;
+  width: 148px;
 }
 </style>
