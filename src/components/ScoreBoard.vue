@@ -108,7 +108,7 @@ export default {
 .score h1,
 .moves h1 {
   margin: 0;
-  text-shadow: purple 1px 1px;
+  text-shadow: -2px 0 firebrick, 0 2px firebrick, 2px 0 firebrick, 0 -2px firebrick;
   font-size: 30px;
 }
 
@@ -119,7 +119,8 @@ export default {
   background-size: cover;
   font-family: "Emilys Candy", cursive;
   font-size: 20px;
-  color: #ff00ff;
+  color: #fff8dc;
+  text-shadow: -2px 0 firebrick, 0 2px firebrick, 2px 0 firebrick, 0 -2px firebrick;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -131,7 +132,6 @@ export default {
 .taskSheet h1 {
   margin: 0;
   text-align: center;
-  text-shadow: purple 1px 1px;
 }
 
 .score-bar {
