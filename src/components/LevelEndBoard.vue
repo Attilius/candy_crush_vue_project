@@ -113,9 +113,7 @@ export default {
   left: 20px;
 }
 
-.exit {
-  background: url("../assets/images/magenta_button.png") no-repeat center;
-  background-size: cover;
+.exit, .again {
   height: 50px;
   width: 50px;
   display: flex;
@@ -125,8 +123,15 @@ export default {
   color: #fff8dc;
   font-size: 33px;
   font-weight: 700;
-  text-shadow: -1px 0 firebrick, 0 1px firebrick, 1px 0 firebrick, 0 -1px firebrick;
+  text-shadow: -2px 0 firebrick, 0 2px firebrick, 2px 0 firebrick, 0 -2px firebrick;
   position: absolute;
+}
+
+.exit {
+  background: url("../assets/images/magenta_button.png") no-repeat center;
+  background-size: cover;
+  height: 50px;
+  width: 50px;
   top: 10px;
   right: 10px;
 }
@@ -141,15 +146,6 @@ export default {
   background-size: cover;
   height: 70px;
   width: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  color: #fff8dc;
-  font-size: 33px;
-  font-weight: 700;
-  text-shadow: -2px 0 firebrick, 0 2px firebrick, 2px 0 firebrick, 0 -2px firebrick;
-  position: absolute;
   bottom: 50px;
 }
 
