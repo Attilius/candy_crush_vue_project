@@ -29,7 +29,7 @@ export default {
     font-family: 'Emilys Candy', cursive;
     font-size: 22px;
     text-align: center;
-    text-shadow: goldenrod 1px 1px;
+    text-shadow: -1px 0 firebrick, 0 1px firebrick, 1px 0 firebrick, 0 -1px firebrick;
     display: flex;
     justify-content: center;
     align-items: center;
