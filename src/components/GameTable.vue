@@ -160,6 +160,21 @@ export default {
       }
     },
 
+    checkForDoubleThreeUpLeft() {
+      for (let i = 0; i < 48; i++) {
+        const rowOfUpLeftDoubleThree = [i, i - 1, i - 2, i - 7, i - 7 * 2];
+        const decidedColor = this.$store.state.candies[i].image;
+        const notValid = [
+          0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+          20, 21, 22, 27, 28, 29, 35, 36, 37, 41, 42, 43, 48,
+        ];
+
+        if (notValid.includes(i)) continue;
+
+        this.itemRemover(rowOfUpLeftDoubleThree, decidedColor, 60)
+      }
+    },
+
     checkForRowOfThree() {
       for (let i = 0; i < 48; i++) {
         const rowOfThree = [i, i + 1, i + 2];
@@ -208,6 +223,7 @@ export default {
   watch: {
     "$store.state.candies": {
       handler() {
+        this.checkForDoubleThreeUpLeft()
         this.checkForColumnOfFive();
         this.checkForRowOfFive();
         this.checkForColumnOfFour();
