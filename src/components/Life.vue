@@ -1,7 +1,7 @@
 <template>
   <div class="life">
     <div id="heart">{{ setLife }}</div>
-    <div id="life-regeneration">{{ life_status }}</div>
+    <div id="life-regeneration">{{ setLifeStatus }}</div>
   </div>
 </template>
 
@@ -21,13 +21,21 @@ export default {
 
   computed: {
     setLife() {
-      return this.$store.getters.life
+      return this.$store.getters.life;
+    },
+
+    setLifeStatus() {
+      return this.$store.getters.lifeStatus;
     }
   },
 
   methods: {
     changeLifeInStore() {
       this.$store.commit('increment', 1);
+    },
+
+    changeLifeStatusInStore(value) {
+      this.$store.commit('changeLifeStatus', value);
     },
 
     lifeRegeneration() {
@@ -55,10 +63,12 @@ export default {
         }
 
         if (this.$store.getters.life < 20) {
-          this.life_status = timecounter;
+          //this.life_status = timecounter;
+          this.changeLifeStatusInStore(timecounter);
         } else {
           clearInterval(timer);
-          this.life_status = "Max";
+          //this.life_status = "Max";
+          this.changeLifeStatusInStore("Max");
         }
       }, 1000);
     },
