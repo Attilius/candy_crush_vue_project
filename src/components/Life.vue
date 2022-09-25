@@ -1,6 +1,6 @@
 <template>
   <div class="life">
-    <div id="heart">{{ life }}</div>
+    <div id="heart">{{ setLife }}</div>
     <div id="life-regeneration">{{ life_status }}</div>
   </div>
 </template>
@@ -8,7 +8,62 @@
 <script>
 export default {
   name: "Life",
-  props: ['life', 'life_status']
+
+  data() {
+    return {
+      //life: this.$store.getters.life,
+      life_status: "",
+    };
+  },
+
+  mounted() {
+    this.lifeRegeneration();
+  },
+
+  computed: {
+    setLife() {
+      return this.$store.getters.life
+    }
+  },
+
+  methods: {
+    changeLifeInStore() {
+      this.$store.commit('increment', 1);
+    },
+
+    lifeRegeneration() {
+      let min = 9;
+      let sec = 60;
+      let timecounter = "";
+      const timer = setInterval(() => {
+        if (sec > 0) {
+          sec--;
+          timecounter = "0" + min + ":" + sec;
+          if (sec < 10) {
+            timecounter = "0" + min + ":" + "0" + sec;
+          }
+        }
+
+        if (min > 0 && sec === 0) {
+          min--;
+          sec = 60;
+        }
+
+        if (this.$store.getters.life <= 19 && min === 0 && sec === 0) {
+          this.changeLifeInStore();
+          min = 0;
+          sec = 10;
+        }
+
+        if (this.$store.getters.life < 20) {
+          this.life_status = timecounter;
+        } else {
+          clearInterval(timer);
+          this.life_status = "Max";
+        }
+      }, 1000);
+    },
+  }
 };
 </script>
 
