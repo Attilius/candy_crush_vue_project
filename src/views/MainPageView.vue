@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <Navbar />
-    <Header :life="life" :life_status="life_status" />
+    <Header />
     <div class="body">
       <div class="body-left"></div>
       <div class="body-right"></div>
@@ -45,60 +45,18 @@ export default {
     Header,
   },
 
-  data() {
-    return {
-      life: 20,
-      life_status: "",
-    };
-  },
-
-  mounted() {
-    this.lifeRegeneration();
-  },
-
   methods: {
-    lifeRegeneration() {
-      let min = 9;
-      let sec = 60;
-      let timecounter = "";
-      const timer = setInterval(() => {
-        if (sec > 0) {
-          sec--;
-          timecounter = "0" + min + ":" + sec;
-          if (sec < 10) {
-            timecounter = "0" + min + ":" + "0" + sec;
+    start(e) {
+      if (this.$store.state.life > 0) {
+        const routes = router.options.routes;
+        const levelName = e.target.id.replace("-", "_");
+        for (let i = 1; i < routes.length; i++) {
+          if (routes[i].name === levelName) {
+            location.hash = `/${levelName}`;
           }
         }
-
-        if (min > 0 && sec === 0) {
-          min--;
-          sec = 60;
-        }
-
-        if (this.life <= 19 && min === 0 && sec === 0) {
-          this.life++;
-          min = 0;
-          sec = 10;
-        }
-
-        if (this.life < 20) {
-          this.life_status = timecounter;
-        } else {
-          clearInterval(timer);
-          this.life_status = "Max";
-        }
-      }, 1000);
-    },
-
-    start(e) {
-      const routes = router.options.routes;
-      const levelName = e.target.id.replace("-", "_");
-      for (let i = 1; i < routes.length; i++) {
-        if (routes[i].name === levelName) {
-          location.hash = `/${levelName}`;
-        }
       }
-    },
+    }
   },
 };
 </script>
@@ -164,6 +122,8 @@ export default {
   justify-content: center;
   align-items: center;
   color: #fff8dc;
+  text-shadow: -1px 0 goldenrod, 0 1px goldenrod, 1px 0 goldenrod,
+    0 -1px goldenrod;
   cursor: pointer;
 }
 
@@ -175,11 +135,15 @@ export default {
 
 .actual-level {
   background: url("../assets/images/actual_level.png") no-repeat center;
+  text-shadow: -1px 0 orangered, 0 1px orangered, 1px 0 orangered,
+    0 -1px orangered;
   background-size: cover;
 }
 
 .successed-level {
   background: url("../assets/images/successed_level.png") no-repeat center;
+  text-shadow: -1px 0 orangered, 0 1px orangered, 1px 0 orangered,
+    0 -1px orangered;
   background-size: cover;
 }
 
