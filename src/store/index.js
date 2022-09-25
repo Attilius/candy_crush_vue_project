@@ -253,11 +253,16 @@ export default new Vuex.Store({
                 alt: "red"
             },
         ],
-        life: 20
+        life: 20,
+        life_status: ''
     },
     getters: {
         life(state) {
             return state.life;
+        },
+
+        lifeStatus(state) {
+            return state.life_status;
         }
     },
     mutations: {
@@ -267,13 +272,17 @@ export default new Vuex.Store({
 
         increment(state, step) {
             state.life += step;
+        },
+
+        changeLifeStatus(state, value) {
+            state.life_status = value;
         }
     },
     actions: {},
     modules: {},
     plugins: [createPersistedState(
         {
-            paths: ['life']
+            paths: ['life', 'life_status']
         }
     )],
 });
