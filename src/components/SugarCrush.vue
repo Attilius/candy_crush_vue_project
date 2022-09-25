@@ -33,7 +33,7 @@ export default {
 
 .sugar-crush h1 {
   color: #fff8dc;
-  text-shadow: -3px 0 red, 0 3px red, 3px 0 red, 0 -3px red;
+  text-shadow: -4px 0 firebrick, 0 4px firebrick, 4px 0 firebrick, 0 -4px firebrick;
   font-family: "Emilys Candy", cursive;
   font-size: 65px;
 }
