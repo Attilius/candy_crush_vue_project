@@ -48,6 +48,7 @@ export default {
   cursor: pointer;
   color: #fff8dc;
   font-size: 18px;
+  text-shadow: -1px 0 firebrick, 0 1px firebrick, 1px 0 firebrick, 0 -1px firebrick;
   position: absolute;
   top: 10px;
   right: 40px;
