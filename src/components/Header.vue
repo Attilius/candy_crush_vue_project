@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <Life :life="life" :life_status="life_status" />
+    <Life />
     <Star />
     <Coins />
     <SoundButton />
@@ -16,7 +16,6 @@ import SoundButton from "@/components/SoundButton.vue";
 
 export default {
   name: "Header",
-  props: ["life", "life_status"],
   components: {
     Life,
     Star,
