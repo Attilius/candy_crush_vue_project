@@ -11,7 +11,6 @@ export default {
 
   data() {
     return {
-      //life: this.$store.getters.life,
       life_status: "",
     };
   },
