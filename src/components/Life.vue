@@ -8,13 +8,7 @@
 <script>
 export default {
   name: "Life",
-
-  data() {
-    return {
-      life_status: "",
-    };
-  },
-
+  
   mounted() {
     this.lifeRegeneration();
   },
@@ -63,11 +57,9 @@ export default {
         }
 
         if (this.$store.getters.life < 20) {
-          //this.life_status = timecounter;
           this.changeLifeStatusInStore(timecounter);
         } else {
           clearInterval(timer);
-          //this.life_status = "Max";
           this.changeLifeStatusInStore("Max");
         }
       }, 1000);
