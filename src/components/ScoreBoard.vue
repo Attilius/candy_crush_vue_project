@@ -41,7 +41,6 @@ export default {
       if (newValue) {
         this.bar -= 4;
         this.actionBar();
-        console.log(newValue)
       }
     }
   },
