@@ -5,7 +5,14 @@
       <h1>{{ moves }}</h1>
     </div>
     <div class="score-bar">
-      <div id="score-action"></div>
+      <div id="score-action">
+        <div class="border-of-level-stars-1 bar-star"></div>
+        <div class="border-of-level-stars-2 bar-star"></div>
+        <div class="border-of-level-stars-3 bar-star"></div>
+        <div class="border-of-level-stars-4 bar-star"></div>
+        <div class="border-of-level-stars-5 bar-star"></div>
+        <div class="border-of-level-stars-6 bar-star"></div>
+      </div>
     </div>
     <div class="score">
       <h1>{{ score }}</h1>
@@ -151,5 +158,12 @@ export default {
   width: 100%;
   position: absolute;
   right: 0;
+}
+
+.bar-star {
+  width: 10%;
+  height: 100%;
+  background: url("../assets/images/3D_star.png") no-repeat center;
+  background-size: cover;
 }
 </style>
