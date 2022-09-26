@@ -33,6 +33,7 @@ export default {
     },
 
     retryLevel() {
+      this.changeLifeInStore();
       location.reload();
     },
 
