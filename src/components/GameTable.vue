@@ -87,14 +87,9 @@ export default {
         }
 
         try {
-          if (
-            this.$store.state.candies[i + 7].image === blank &&
-            !isFixedField
-          ) {
-            this.$store.state.candies[i + 7].image =
-              this.$store.state.candies[i].image;
-            this.$store.state.candies[i + 7].alt =
-              this.$store.state.candies[i].alt;
+          if ( this.$store.state.candies[i + 7].image === blank && !isFixedField) {
+            this.$store.state.candies[i + 7].image = this.$store.state.candies[i].image;
+            this.$store.state.candies[i + 7].alt = this.$store.state.candies[i].alt;
             this.$store.state.candies[i].image = blank;
             this.$store.state.candies[i].alt = "blank";
           }
