@@ -33,9 +33,22 @@ export default {
     },
 
     lifeRegeneration() {
-      let min = 9;
-      let sec = 60;
-      let timecounter = "";
+        let min = 0;
+        let sec = 0;
+        let timecounter = "";
+
+      if (this.$store.getters.lifeStatus !== '' && this.$store.getters.lifeStatus !== "Max") {
+        min = parseInt(this.$store.getters.lifeStatus.split(':')[0].split('')[1]);
+        if (parseInt(this.$store.getters.lifeStatus.split(':')[1]) > 9) {
+          sec = parseInt(this.$store.getters.lifeStatus.split(':')[1]);
+        } else {
+          sec = parseInt(this.$store.getters.lifeStatus.split(':')[1].split('')[1]);
+        }
+      } else {
+        min = 9;
+        sec = 60;
+      }
+      
       const timer = setInterval(() => {
         if (sec > 0) {
           sec--;
