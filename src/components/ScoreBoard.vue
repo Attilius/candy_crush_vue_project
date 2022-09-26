@@ -46,15 +46,6 @@ export default {
     }
   },
 
-  mounted() {
-    const moves = document.getElementById('moves');
-
-      moves.addEventListener('click', () => {
-        this.score += 10;
-        this.bar -= 4;
-      });
-  },
-
   methods: {
     actionBar() {
       const bar = document.getElementById('score-action');
