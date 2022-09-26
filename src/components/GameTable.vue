@@ -103,7 +103,7 @@ export default {
     },
 
     itemRemover(matchingArray, decidedColor, score) {
-      if ( matchingArray.every((square) => this.$store.state.candies[square].image === decidedColor)) {
+      if (matchingArray.every((square) => this.$store.state.candies[square].image === decidedColor)) {
         if (matchingArray.every((square) => this.$store.state.candies[square].image !== "blank.png")) this.setScore(score);
         matchingArray.forEach(
           (square) => (this.$store.state.candies[square].image = "blank.png")
