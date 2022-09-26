@@ -216,7 +216,7 @@ export default {
 
         if (notValid.includes(i)) continue;
 
-        this.itemRemover(rowOfUpLeftDoubleThree, decidedColor, 60)
+        this.itemRemover(rowOfUpLeftDoubleThree, decidedColor, 50)
       }
     },
 
