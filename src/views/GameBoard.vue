@@ -6,11 +6,12 @@
       <GameTable
         @updateScore="(setScore) => (score += setScore)"
         @updateGetScore="(setScore) => (getScore = setScore)"
+        @updateIndex="(setIndex) => (index = setIndex)"
         @decrementMoves="(setMoves) => (moves -= setMoves)"
       />
       <SugarCrush :visibility="sugarCrushVisibility" />
       <LevelEndBoard :visibility="levelEndVisibility" />
-      <Score :score="getScore" />
+      <Score :score="getScore" :index="index" />
     </div>
   </div>
 </template>
@@ -39,6 +40,7 @@ export default {
       moves: 20,
       score: 0,
       getScore: 0,
+      index: 0,
       sugarCrushVisibility: 'hidden',
       levelEndVisibility: 'hidden'
     };
