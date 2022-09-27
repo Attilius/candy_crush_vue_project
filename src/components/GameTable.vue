@@ -102,6 +102,7 @@ export default {
         if (matchingArray.every((square) => this.$store.state.candies[square].image !== "blank.png")) {
           this.setScore(score);
           this.getCurrentScore(score);
+          this.setIndex(matchingArray[1]);
         }
          
         matchingArray.forEach(
@@ -240,6 +241,10 @@ export default {
 
         this.itemRemover(columnOfThree, decidedColor, 30)
       }
+    },
+
+    setIndex(index) {
+      this.$emit('updateIndex', index);
     },
 
     setScore(score) {
