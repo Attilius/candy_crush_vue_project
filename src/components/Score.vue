@@ -7,7 +7,7 @@
 <script>
 export default {
     name: 'score',
-    props: ['score'],
+    props: ['score', 'index'],
 
     watch: {
         score(newValue, oldValue) {
@@ -17,6 +17,12 @@ export default {
                     score.style.visibility = 'visible';
                 },100);
                 this.setHide();
+            }
+        },
+
+        index(newValue, oldValue) {
+            if (newValue) {
+                console.log(newValue)
             }
         }
     },
@@ -40,9 +46,9 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    top: 360px;
-    left: 730px;
+    position: absolute;
+    top: 150px;
+    left: 520px;
     visibility: hidden;
 }
 
