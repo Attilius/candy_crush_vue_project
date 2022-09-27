@@ -5,6 +5,7 @@
       <ScoreBoard :moves="moves" :score="score" />
       <GameTable
         @updateScore="(setScore) => (score += setScore)"
+        @updateGetScore="(setScore) => (getScore = setScore)"
         @decrementMoves="(setMoves) => (moves -= setMoves)"
       />
       <SugarCrush :visibility="sugarCrushVisibility" />
@@ -34,6 +35,7 @@ export default {
     return {
       moves: 20,
       score: 0,
+      getScore: 0,
       sugarCrushVisibility: 'hidden',
       levelEndVisibility: 'hidden'
     };
