@@ -10,6 +10,7 @@
       />
       <SugarCrush :visibility="sugarCrushVisibility" />
       <LevelEndBoard :visibility="levelEndVisibility" />
+      <Score :score="getScore" />
     </div>
   </div>
 </template>
@@ -20,6 +21,7 @@ import ScoreBoard from "../components/ScoreBoard.vue";
 import GameTable from "../components/GameTable.vue";
 import SugarCrush from "../components/SugarCrush.vue";
 import LevelEndBoard from "../components/LevelEndBoard.vue";
+import Score from "../components/Score.vue";
 
 export default {
   name: "GameBoard",
@@ -28,7 +30,8 @@ export default {
     ScoreBoard,
     GameTable,
     SugarCrush,
-    LevelEndBoard
+    LevelEndBoard,
+    Score
   },
 
   data() {
