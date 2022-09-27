@@ -17,206 +17,209 @@ export default {
                     left: '520px'
                 },
                 {
-                    top: '220px',
-                    left: '520px'
-                },
-                {
-                    top: '290px',
-                    left: '520px'
-                },
-                {
-                    top: '360px',
-                    left: '520px'
-                },
-                {
-                    top: '430px',
-                    left: '520px'
-                },
-                {
-                    top: '500px',
-                    left: '520px'
-                },
-                {
-                    top: '570px',
-                    left: '520px'
-                },
-
-
-                {
                     top: '150px',
                     left: '590px'
                 },
-                {
-                    top: '220px',
-                    left: '590px'
-                },
-                {
-                    top: '290px',
-                    left: '590px'
-                },
-                {
-                    top: '360px',
-                    left: '590px'
-                },
-                {
-                    top: '430px',
-                    left: '590px'
-                },
-                {
-                    top: '500px',
-                    left: '590px'
-                },
-                {
-                    top: '570px',
-                    left: '590px'
-                },
-
-
                 {
                     top: '150px',
                     left: '660px'
                 },
                 {
-                    top: '220px',
-                    left: '660px'
-                },
-                {
-                    top: '290px',
-                    left: '660px'
-                },
-                {
-                    top: '360px',
-                    left: '660px'
-                },
-                {
-                    top: '430px',
-                    left: '660px'
-                },
-                {
-                    top: '500px',
-                    left: '660px'
-                },
-                {
-                    top: '570px',
-                    left: '660px'
-                },
-
-
-
-
-                {
                     top: '150px',
                     left: '730px'
                 },
-                {
-                    top: '220px',
-                    left: '730px'
-                },
-                {
-                    top: '290px',
-                    left: '730px'
-                },
-                {
-                    top: '360px',
-                    left: '730px'
-                },
-                {
-                    top: '430px',
-                    left: '730px'
-                },
-                {
-                    top: '500px',
-                    left: '730px'
-                },
-                {
-                    top: '570px',
-                    left: '730px'
-                },
-
                 {
                     top: '150px',
                     left: '800px'
                 },
                 {
+                    top: '150px',
+                    left: '870px'
+                },
+                {
+                    top: '150px',
+                    left: '940px'
+                },
+
+
+                {
+                    top: '220px',
+                    left: '520px'
+                },
+                {
+                    top: '220px',
+                    left: '590px'
+                },
+                {
+                    top: '220px',
+                    left: '660px'
+                },
+                {
+                    top: '220px',
+                    left: '730px'
+                },
+                {
                     top: '220px',
                     left: '800px'
+                },
+                {
+                    top: '220px',
+                    left: '870px'
+                },
+                {
+                    top: '220px',
+                    left: '940px'
+                },
+
+
+                {
+                    top: '290px',
+                    left: '520px'
+                },
+                {
+                    top: '290px',
+                    left: '590px'
+                },
+                {
+                    top: '290px',
+                    left: '660px'
+                },
+                {
+                    top: '290px',
+                    left: '730px'
                 },
                 {
                     top: '290px',
                     left: '800px'
                 },
                 {
+                    top: '290px',
+                    left: '870px'
+                },
+                {
+                    top: '290px',
+                    left: '940px'
+                },
+
+
+
+
+               {
+                    top: '360px',
+                    left: '520px'
+                },
+                {
+                    top: '360px',
+                    left: '590px'
+                },
+                {
+                    top: '360px',
+                    left: '660px'
+                },
+                {
+                    top: '360px',
+                    left: '730px'
+                },
+                {
                     top: '360px',
                     left: '800px'
+                },
+                {
+                    top: '360px',
+                    left: '870px'
+                },
+                {
+                    top: '360px',
+                    left: '940px'
+                },
+
+
+
+                 {
+                    top: '430px',
+                    left: '520px'
+                },
+                {
+                    top: '430px',
+                    left: '590px'
+                },
+                {
+                    top: '430px',
+                    left: '660px'
+                },
+                {
+                    top: '430px',
+                    left: '730px'
                 },
                 {
                     top: '430px',
                     left: '800px'
                 },
                 {
+                    top: '430px',
+                    left: '870px'
+                },
+                {
+                    top: '430px',
+                    left: '940px'
+                },
+
+
+
+
+                 {
+                    top: '500px',
+                    left: '520px'
+                },
+                {
+                    top: '500px',
+                    left: '590px'
+                },
+                {
+                    top: '500px',
+                    left: '660px'
+                },
+                {
+                    top: '500px',
+                    left: '730px'
+                },
+                {
                     top: '500px',
                     left: '800px'
+                },
+                {
+                    top: '500px',
+                    left: '870px'
+                },
+                {
+                    top: '500px',
+                    left: '940px'
+                },
+
+
+                 {
+                    top: '570px',
+                    left: '520px'
+                },
+                {
+                    top: '570px',
+                    left: '590px'
+                },
+                {
+                    top: '570px',
+                    left: '660px'
+                },
+                {
+                    top: '570px',
+                    left: '730px'
                 },
                 {
                     top: '570px',
                     left: '800px'
                 },
-
-
-
-                {
-                    top: '150px',
-                    left: '870px'
-                },
-                {
-                    top: '220px',
-                    left: '870px'
-                },
-                {
-                    top: '290px',
-                    left: '870px'
-                },
-                {
-                    top: '360px',
-                    left: '870px'
-                },
-                {
-                    top: '430px',
-                    left: '870px'
-                },
-                {
-                    top: '500px',
-                    left: '870px'
-                },
                 {
                     top: '570px',
                     left: '870px'
-                },
-
-
-                {
-                    top: '150px',
-                    left: '940px'
-                },
-                {
-                    top: '220px',
-                    left: '940px'
-                },
-                {
-                    top: '290px',
-                    left: '940px'
-                },
-                {
-                    top: '360px',
-                    left: '940px'
-                },
-                {
-                    top: '430px',
-                    left: '940px'
-                },
-                {
-                    top: '500px',
-                    left: '940px'
                 },
                 {
                     top: '570px',
@@ -240,7 +243,7 @@ export default {
         index(newValue, oldValue) {
             if (newValue) {
                 const score = document.getElementById('score');
-
+console.log(newValue)
                 score.style.top = this.matrix[newValue].top;
                 score.style.left = this.matrix[newValue].left;
             }
