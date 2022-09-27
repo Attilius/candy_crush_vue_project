@@ -39,7 +39,7 @@ export default {
   watch: {
     score(newValue, oldValue) {
       if (newValue) {
-        this.bar -= 4;
+        this.bar -= 1.8;
         this.actionBar();
       }
     }
@@ -49,7 +49,7 @@ export default {
     actionBar() {
       const bar = document.getElementById('score-action');
 
-      if (this.score > 0) {
+      if (this.score > 50) {
         bar.style.width = `${this.bar}%`;
         bar.style.borderTopLeftRadius = 0;
         bar.style.borderBottomLeftRadius = 0;
