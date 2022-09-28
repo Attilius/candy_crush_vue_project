@@ -220,7 +220,7 @@ export default {
 
   watch: {
     score(newValue, oldValue) {
-      if (newValue) {
+      if (newValue > 0) {
         setTimeout(() => {
           const score = document.getElementById("score");
           score.style.visibility = "visible";
