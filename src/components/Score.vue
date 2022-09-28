@@ -1,13 +1,13 @@
 <template>
-  <div class="current-score" id="score">
-    <h1>+{{ score }}</h1>
+  <div id="score">
+    <h1 id="current-score">+{{ score }}</h1>
   </div>
 </template>
 
 <script>
 export default {
   name: "score",
-  props: ["score", "index"],
+  props: ["score", "index", "color"],
 
   data() {
     return {
@@ -224,19 +224,28 @@ export default {
         setTimeout(() => {
           const score = document.getElementById("score");
           score.style.visibility = "visible";
-        }, 10);
+        }, 100);
         this.setHide();
       }
     },
 
     index(newValue, oldValue) {
-      if (newValue) {
+      if (newValue !== 0) {
         const score = document.getElementById("score");
-        console.log(newValue);
+        //console.log(newValue);
         score.style.top = this.matrix[newValue].top;
         score.style.left = this.matrix[newValue].left;
       }
     },
+
+    color(newValue, oldValue) {
+      if (newValue !== '') {
+        //console.log(newValue)
+        const score = document.getElementById("current-score");
+
+        score.style.textShadow = `-3px 0 ${newValue}, 0 3px ${newValue}, 3px 0 ${newValue}, 0 -3px ${newValue}`;
+      }
+    }
   },
 
   methods: {
@@ -244,7 +253,7 @@ export default {
       setTimeout(() => {
         const score = document.getElementById("score");
         score.style.visibility = "hidden";
-      }, 2000);
+      }, 1000);
     },
   },
 };
@@ -261,15 +270,16 @@ export default {
   top: 0;
   left: 0;
   visibility: hidden;
+  z-index: 11;
 }
 
-.current-score h1 {
+#current-score{
   text-align: center;
   font-size: 45px;
   font-family: "Emilys Candy", cursive;
   font-size: 44px;
-  text-shadow: -3px 0 firebrick, 0 3px firebrick, 3px 0 firebrick,
-    0 -3px firebrick;
+  text-shadow: -3px 0 red, 0 3px red, 3px 0 red,
+    0 -3px red;
   color: #fff8dc;
 }
 </style>
