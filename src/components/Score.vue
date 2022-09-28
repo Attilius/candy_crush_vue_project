@@ -232,7 +232,7 @@ export default {
     index(newValue, oldValue) {
       if (newValue !== 0) {
         const score = document.getElementById("score");
-        //console.log(newValue);
+
         score.style.top = this.matrix[newValue].top;
         score.style.left = this.matrix[newValue].left;
       }
