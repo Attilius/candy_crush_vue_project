@@ -7,11 +7,12 @@
         @updateScore="(setScore) => (score += setScore)"
         @updateGetScore="(setScore) => (getScore = setScore)"
         @updateIndex="(setIndex) => (index = setIndex)"
+        @updateColor="(setColor) => (color = setColor)"
         @decrementMoves="(setMoves) => (moves -= setMoves)"
       />
       <SugarCrush :visibility="sugarCrushVisibility" />
       <LevelEndBoard :visibility="levelEndVisibility" />
-      <Score :score="getScore" :index="index" />
+      <Score :score="getScore" :index="index" :color="color" />
     </div>
   </div>
 </template>
@@ -41,6 +42,7 @@ export default {
       score: 0,
       getScore: 0,
       index: 0,
+      color: '',
       sugarCrushVisibility: 'hidden',
       levelEndVisibility: 'hidden'
     };
