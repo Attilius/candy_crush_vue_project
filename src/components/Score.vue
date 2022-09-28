@@ -240,7 +240,6 @@ export default {
 
     color(newValue, oldValue) {
       if (newValue !== '') {
-        //console.log(newValue)
         const score = document.getElementById("current-score");
 
         score.style.textShadow = `-3px 0 ${newValue}, 0 3px ${newValue}, 3px 0 ${newValue}, 0 -3px ${newValue}`;
