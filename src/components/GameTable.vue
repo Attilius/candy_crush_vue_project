@@ -103,6 +103,7 @@ export default {
           this.setScore(score);
           this.getCurrentScore(score);
           this.setIndex(matchingArray[1]);
+          this.setColor(this.$store.state.candies[matchingArray[1]].alt);
         }
          
         matchingArray.forEach(
@@ -241,6 +242,10 @@ export default {
 
         this.itemRemover(columnOfThree, decidedColor, 30)
       }
+    },
+
+    setColor(color) {
+      this.$emit('updateColor', color);
     },
 
     setIndex(index) {
