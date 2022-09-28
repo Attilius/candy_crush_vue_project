@@ -277,8 +277,7 @@ export default {
   font-size: 45px;
   font-family: "Emilys Candy", cursive;
   font-size: 44px;
-  text-shadow: -3px 0 red, 0 3px red, 3px 0 red,
-    0 -3px red;
+  text-shadow: -3px 0 red, 0 3px red, 3px 0 red, 0 -3px red;
   color: #fff8dc;
 }
 </style>
