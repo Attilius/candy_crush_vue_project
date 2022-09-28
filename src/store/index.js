@@ -20,7 +20,7 @@ export default new Vuex.Store({
             {
                 id: 3,
                 image: "yellow.png",
-                alt: "yellow"
+                alt: "goldenrod"
             },
             {
                 id: 4,
@@ -30,12 +30,12 @@ export default new Vuex.Store({
             {
                 id: 5,
                 image: "yellow.png",
-                alt: "yellow"
+                alt: "goldenrod"
             },
             {
                 id: 6,
                 image: "yellow.png",
-                alt: "yellow"
+                alt: "goldenrod"
             },
             {
                 id: 7,
@@ -55,7 +55,7 @@ export default new Vuex.Store({
             {
                 id: 10,
                 image: "yellow.png",
-                alt: "yellow"
+                alt: "goldenrod"
             },
             {
                 id: 11,
@@ -100,7 +100,7 @@ export default new Vuex.Store({
             {
                 id: 19,
                 image: "yellow.png",
-                alt: "yellow"
+                alt: "goldenrod"
             },
             {
                 id: 20,
@@ -110,7 +110,7 @@ export default new Vuex.Store({
             {
                 id: 21,
                 image: "yellow.png",
-                alt: "yellow"
+                alt: "goldenrod"
             },
             {
                 id: 22,
@@ -120,7 +120,7 @@ export default new Vuex.Store({
             {
                 id: 23,
                 image: "yellow.png",
-                alt: "yellow"
+                alt: "goldenrod"
             },
             {
                 id: 24,
@@ -150,12 +150,12 @@ export default new Vuex.Store({
             {
                 id: 29,
                 image: "yellow.png",
-                alt: "yellow"
+                alt: "goldenrod"
             },
             {
                 id: 30,
                 image: "yellow.png",
-                alt: "yellow"
+                alt: "goldenrod"
             },
             {
                 id: 31,
@@ -175,7 +175,7 @@ export default new Vuex.Store({
             {
                 id: 34,
                 image: "yellow.png",
-                alt: "yellow"
+                alt: "goldenrod"
             },
             {
                 id: 35,
@@ -200,12 +200,12 @@ export default new Vuex.Store({
             {
                 id: 39,
                 image: "yellow.png",
-                alt: "yellow"
+                alt: "goldenrod"
             },
             {
                 id: 40,
                 image: "yellow.png",
-                alt: "yellow"
+                alt: "goldenrod"
             },
             {
                 id: 41,
@@ -245,7 +245,7 @@ export default new Vuex.Store({
             {
                 id: 48,
                 image: "yellow.png",
-                alt: "yellow"
+                alt: "goldenrod"
             },
             {
                 id: 49,
