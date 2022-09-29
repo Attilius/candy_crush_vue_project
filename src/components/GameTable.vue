@@ -64,9 +64,6 @@ export default {
         this.$store.state.candies[toIndex].image = chosen_image;
         this.$store.state.candies[fromIndex].alt = replaced_alt;
         this.$store.state.candies[toIndex].alt = chosen_alt;
-      }
-
-      if (validMove) {
         this.checkForDoubleThreeUpRight(50);
         this.checkForDoubleThreeUpLeft(50);
         this.checkForDoubleThreeDownRight(50);
@@ -77,6 +74,10 @@ export default {
         this.checkForRowOfFour(40);
         this.checkForRowOfThree(30);
         this.checkForColumnOfThree(30);
+      }
+
+      if (validMove) {
+        
       }
 
       this.setMoves();
