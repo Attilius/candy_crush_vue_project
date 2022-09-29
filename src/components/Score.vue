@@ -255,7 +255,7 @@ export default {
         const score = document.getElementById("score");
         score.style.visibility = "hidden";
         this.resetGetScore();
-      }, 1000);
+      }, 700);
     },
 
     resetGetScore() {
@@ -277,7 +277,7 @@ export default {
         }
         ], {
         // timing options
-        duration: 1000,
+        duration: 700,
         iterations: 1
       });
     }
