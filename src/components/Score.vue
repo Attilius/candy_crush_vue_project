@@ -235,6 +235,8 @@ export default {
 
         score.style.top = this.matrix[newValue].top;
         score.style.left = this.matrix[newValue].left;
+
+        this.moveScore(score);
       }
     },
 
@@ -258,7 +260,28 @@ export default {
 
     resetGetScore() {
       this.$emit('resetGetScore', 0);
+    },
+
+    moveScore(score) {
+      var rect = score.getBoundingClientRect();
+
+      score.animate([
+        // keyframes
+        { 
+          top: `${rect.top}px`,
+          left: `${rect.left}px`
+        },
+        { 
+          top: '240px',
+          left: '330px'
+        }
+        ], {
+        // timing options
+        duration: 1000,
+        iterations: 1
+      });
     }
+
   },
 };
 </script>
