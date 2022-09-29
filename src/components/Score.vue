@@ -252,8 +252,13 @@ export default {
       setTimeout(() => {
         const score = document.getElementById("score");
         score.style.visibility = "hidden";
+        this.resetGetScore();
       }, 1000);
     },
+
+    resetGetScore() {
+      this.$emit('resetGetScore', 0);
+    }
   },
 };
 </script>
