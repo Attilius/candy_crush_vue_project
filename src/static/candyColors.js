@@ -21,7 +21,7 @@ const candyColors = [
     },
     {
         src: "yellow.png", 
-        alt: 'yellow'
+        alt: 'goldenrod'
     }
 ];
 
