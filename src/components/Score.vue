@@ -263,7 +263,7 @@ export default {
     },
 
     moveScore(score) {
-      var rect = score.getBoundingClientRect();
+      const rect = score.getBoundingClientRect();
 
       score.animate([
         // keyframes
