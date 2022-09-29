@@ -12,7 +12,12 @@
       />
       <SugarCrush :visibility="sugarCrushVisibility" />
       <LevelEndBoard :visibility="levelEndVisibility" />
-      <Score :score="getScore" :index="index" :color="color" />
+      <Score 
+        :score="getScore" 
+        :index="index" 
+        :color="color" 
+        @resetGetScore="(resetGetScore) => (getScore = resetGetScore)"
+      />
     </div>
   </div>
 </template>
