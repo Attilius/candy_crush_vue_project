@@ -76,10 +76,6 @@ export default {
         this.checkForColumnOfThree(30);
       }
 
-      if (validMove) {
-        
-      }
-
       this.setMoves();
     },
 
