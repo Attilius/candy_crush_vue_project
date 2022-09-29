@@ -66,6 +66,19 @@ export default {
         this.$store.state.candies[toIndex].alt = chosen_alt;
       }
 
+      if (validMove) {
+        this.checkForDoubleThreeUpRight(50);
+        this.checkForDoubleThreeUpLeft(50);
+        this.checkForDoubleThreeDownRight(50);
+        this.checkForDoubleThreeDownLeft(50);
+        this.checkForColumnOfFive(50);
+        this.checkForRowOfFive(50);
+        this.checkForColumnOfFour(40);
+        this.checkForRowOfFour(40);
+        this.checkForRowOfThree(30);
+        this.checkForColumnOfThree(30);
+      }
+
       this.setMoves();
     },
 
@@ -113,16 +126,16 @@ export default {
       }
     },
 
-    checkForColumnOfFive() {
+    checkForColumnOfFive(score = 60) {
       for (let i = 0; i <= 21; i++) {
         const columnOfFive = [i, i + 7, i + 7 * 2, i + 7 * 3, i + 7 * 4];
         const decidedColor = this.$store.state.candies[i].image;
 
-        this.itemRemover(columnOfFive, decidedColor, 50)
+        this.itemRemover(columnOfFive, decidedColor, score)
       }
     },
 
-    checkForRowOfFive() {
+    checkForRowOfFive(score = 60) {
       for (let i = 0; i < 48; i++) {
         const rowOfFive = [i, i + 1, i + 2, i + 3, i + 4];
         const decidedColor = this.$store.state.candies[i].image;
@@ -133,11 +146,11 @@ export default {
 
         if (notValid.includes(i)) continue;
 
-        this.itemRemover(rowOfFive, decidedColor, 50)
+        this.itemRemover(rowOfFive, decidedColor, score)
       }
     },
 
-    checkForRowOfFour() {
+    checkForRowOfFour(score = 48) {
       for (let i = 0; i < 48; i++) {
         const rowOfFour = [i, i + 1, i + 2, i + 3];
         const decidedColor = this.$store.state.candies[i].image;
@@ -148,20 +161,20 @@ export default {
 
         if (notValid.includes(i)) continue;
 
-        this.itemRemover(rowOfFour, decidedColor, 40)
+        this.itemRemover(rowOfFour, decidedColor, score)
       }
     },
 
-    checkForColumnOfFour() {
+    checkForColumnOfFour(score = 48) {
       for (let i = 0; i <= 28; i++) {
         const columnOfFour = [i, i + 7, i + 7 * 2, i + 7 * 3];
         const decidedColor = this.$store.state.candies[i].image;
 
-        this.itemRemover(columnOfFour, decidedColor, 40)
+        this.itemRemover(columnOfFour, decidedColor, score)
       }
     },
 
-    checkForDoubleThreeUpRight() {
+    checkForDoubleThreeUpRight(score = 60) {
       for (let i = 0; i < 48; i++) {
         const rowOfUpLeftDoubleThree = [i, i + 1, i + 2, i - 7, i - 7 * 2];
         const decidedColor = this.$store.state.candies[i].image;
@@ -172,11 +185,11 @@ export default {
 
         if (notValid.includes(i)) continue;
 
-        this.itemRemover(rowOfUpLeftDoubleThree, decidedColor, 50)
+        this.itemRemover(rowOfUpLeftDoubleThree, decidedColor, score)
       }
     },
 
-    checkForDoubleThreeUpLeft() {
+    checkForDoubleThreeUpLeft(score = 60) {
       for (let i = 0; i < 48; i++) {
         const rowOfUpLeftDoubleThree = [i, i - 1, i - 2, i - 7, i - 7 * 2];
         const decidedColor = this.$store.state.candies[i].image;
@@ -187,11 +200,11 @@ export default {
 
         if (notValid.includes(i)) continue;
 
-        this.itemRemover(rowOfUpLeftDoubleThree, decidedColor, 50)
+        this.itemRemover(rowOfUpLeftDoubleThree, decidedColor, score)
       }
     },
 
-    checkForDoubleThreeDownRight() {
+    checkForDoubleThreeDownRight(score = 60) {
       for (let i = 0; i < 48; i++) {
         const rowOfUpLeftDoubleThree = [i, i + 1, i + 2, i + 7, i + 7 * 2];
         const decidedColor = this.$store.state.candies[i].image;
@@ -202,11 +215,11 @@ export default {
 
         if (notValid.includes(i)) continue;
 
-        this.itemRemover(rowOfUpLeftDoubleThree, decidedColor, 50)
+        this.itemRemover(rowOfUpLeftDoubleThree, decidedColor, score)
       }
     },
 
-    checkForDoubleThreeDownLeft() {
+    checkForDoubleThreeDownLeft(score = 60) {
       for (let i = 0; i < 48; i++) {
         const rowOfUpLeftDoubleThree = [i, i - 1, i - 2, i + 7, i + 7 * 2];
         const decidedColor = this.$store.state.candies[i].image;
@@ -217,11 +230,11 @@ export default {
 
         if (notValid.includes(i)) continue;
 
-        this.itemRemover(rowOfUpLeftDoubleThree, decidedColor, 50)
+        this.itemRemover(rowOfUpLeftDoubleThree, decidedColor, score)
       }
     },
 
-    checkForRowOfThree() {
+    checkForRowOfThree(score = 36) {
       for (let i = 0; i < 48; i++) {
         const rowOfThree = [i, i + 1, i + 2];
         const decidedColor = this.$store.state.candies[i].image;
@@ -231,16 +244,16 @@ export default {
 
         if (notValid.includes(i)) continue;
 
-        this.itemRemover(rowOfThree, decidedColor, 30)
+        this.itemRemover(rowOfThree, decidedColor, score)
       }
     },
 
-    checkForColumnOfThree() {
+    checkForColumnOfThree(score = 36) {
       for (let i = 0; i <= 35; i++) {
         const columnOfThree = [i, i + 7, i + 7 * 2];
         const decidedColor = this.$store.state.candies[i].image;
 
-        this.itemRemover(columnOfThree, decidedColor, 30)
+        this.itemRemover(columnOfThree, decidedColor, score)
       }
     },
 
