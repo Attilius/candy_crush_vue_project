@@ -150,7 +150,7 @@ export default {
     checkForRowOfFour(score = 48) {
       for (let i = 0; i < 48; i++) {
         const rowOfFour = [i, i + 1, i + 2, i + 3];
-        const decidedColor = this.$store.state.candies[i].image;
+        const decidedColor = this.$store.state.candies[i].alt;
         const notValid = [
           4, 5, 6, 7, 10, 11, 12, 13, 18, 19, 20, 25, 26, 27, 32, 33, 34, 35,
           38, 39, 40, 41, 46, 47, 48,
