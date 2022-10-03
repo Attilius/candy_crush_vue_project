@@ -126,7 +126,7 @@ export default {
     checkForColumnOfFive(score = 60) {
       for (let i = 0; i <= 21; i++) {
         const columnOfFive = [i, i + 7, i + 7 * 2, i + 7 * 3, i + 7 * 4];
-        const decidedColor = this.$store.state.candies[i].image;
+        const decidedColor = this.$store.state.candies[i].alt;
 
         this.itemRemover(columnOfFive, decidedColor, score)
       }
