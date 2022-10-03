@@ -204,7 +204,7 @@ export default {
     checkForDoubleThreeDownRight(score = 60) {
       for (let i = 0; i < 48; i++) {
         const rowOfUpLeftDoubleThree = [i, i + 1, i + 2, i + 7, i + 7 * 2];
-        const decidedColor = this.$store.state.candies[i].image;
+        const decidedColor = this.$store.state.candies[i].alt;
         const notValid = [
           0, 5, 6, 7, 11, 12, 13, 19, 20, 21, 26, 27, 28, 33, 34, 
           35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48,
