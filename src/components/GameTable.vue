@@ -135,7 +135,7 @@ export default {
     checkForRowOfFive(score = 60) {
       for (let i = 0; i < 48; i++) {
         const rowOfFive = [i, i + 1, i + 2, i + 3, i + 4];
-        const decidedColor = this.$store.state.candies[i].image;
+        const decidedColor = this.$store.state.candies[i].alt;
         const notValid = [
           3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 17, 18, 19, 20, 24, 25, 26, 27, 31,
           32, 33, 34, 35, 37, 38, 39, 40, 41, 45, 46, 47, 48,
