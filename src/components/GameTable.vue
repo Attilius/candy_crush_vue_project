@@ -165,7 +165,7 @@ export default {
     checkForColumnOfFour(score = 48) {
       for (let i = 0; i <= 28; i++) {
         const columnOfFour = [i, i + 7, i + 7 * 2, i + 7 * 3];
-        const decidedColor = this.$store.state.candies[i].image;
+        const decidedColor = this.$store.state.candies[i].alt;
 
         this.itemRemover(columnOfFour, decidedColor, score)
       }
