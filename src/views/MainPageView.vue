@@ -8,6 +8,7 @@
     </div>
     <div class="map">
       <div class="skin">
+        <div class="gift"></div>
         <div class="levels successed-level" id="level-1" @click="start">
           <div class="level-stars three-stars"></div>
           1
@@ -275,5 +276,15 @@ export default {
 .one-star {
   background: url("../assets/images/one_star.png") no-repeat center;
   background-size: cover;
+}
+
+.gift {
+  background: url("../assets/images/gift.png") no-repeat center;
+  background-size: cover;
+  height: 60px;
+  width: 60px;
+  position: relative;
+  top: 300px;
+  left: 40px;
 }
 </style>
