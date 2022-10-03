@@ -248,7 +248,7 @@ export default {
     checkForColumnOfThree(score = 36) {
       for (let i = 0; i <= 35; i++) {
         const columnOfThree = [i, i + 7, i + 7 * 2];
-        const decidedColor = this.$store.state.candies[i].image;
+        const decidedColor = this.$store.state.candies[i].alt;
 
         this.itemRemover(columnOfThree, decidedColor, score)
       }
