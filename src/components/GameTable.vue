@@ -108,7 +108,7 @@ export default {
     },
 
     itemRemover(matchingArray, decidedColor, score) {
-      if (matchingArray.every((square) => this.$store.state.candies[square].image === decidedColor)) {
+      if (matchingArray.every((square) => this.$store.state.candies[square].alt === decidedColor)) {
         if (matchingArray.every((square) => this.$store.state.candies[square].image !== "blank.png")) {
           this.setScore(score);
           this.getCurrentScore(score);
@@ -234,7 +234,7 @@ export default {
     checkForRowOfThree(score = 36) {
       for (let i = 0; i < 48; i++) {
         const rowOfThree = [i, i + 1, i + 2];
-        const decidedColor = this.$store.state.candies[i].image;
+        const decidedColor = this.$store.state.candies[i].alt;
         const notValid = [
           5, 6, 7, 11, 12, 13, 19, 20, 26, 27, 33, 34, 35, 39, 40, 41, 47, 48,
         ];
