@@ -302,7 +302,7 @@ export default {
 
 .rotate {
   transition: ease;
-  animation: rotate 10s linear infinite;
+  animation: rotate 20s linear infinite;
 }
 
 @keyframes rotate {
