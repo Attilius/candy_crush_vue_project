@@ -279,4 +279,17 @@ export default {
   background: url("../assets/images/one_star.png") no-repeat center;
   background-size: cover;
 }
+
+.shine {
+  background: url("../assets/images/shine.png") no-repeat center;
+  background-size: cover;
+  height: 80px;
+  width: 80px;
+  position: relative;
+  top: 230px;
+  left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 </style>
