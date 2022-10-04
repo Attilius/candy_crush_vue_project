@@ -285,12 +285,9 @@ export default {
   background-size: cover;
   height: 80px;
   width: 80px;
-  position: relative;
+  position: absolute;
   top: 230px;
   left: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .gift {
@@ -298,5 +295,8 @@ export default {
   background-size: cover;
   height: 50px;
   width: 50px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
 }
 </style>
