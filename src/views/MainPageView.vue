@@ -9,7 +9,7 @@
     <div class="map">
       <div class="skin">
         <div class="shine rotate"></div>
-        <div class="gift"></div>
+        <div class="gift shake"></div>
         <div class="shadow"></div>
         <div class="levels successed-level" id="level-1" @click="start">
           <div class="level-stars three-stars"></div>
@@ -320,5 +320,20 @@ export default {
   top: 232px;
   left: 22px;
   visibility: hidden;
+}
+
+.shake {
+  transition: all ease;
+  animation: shake .9s alternate infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotateZ(-10deg);
+  }
+
+  100% {
+    transform: rotateZ(10deg);
+  }
 }
 </style>
