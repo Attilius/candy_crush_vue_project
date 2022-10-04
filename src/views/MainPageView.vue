@@ -63,7 +63,7 @@ export default {
     },
 
     openGift() {
-      console.log('Open')
+      document.getElementById('gift').classList.remove('shake');
     }
   },
 };
