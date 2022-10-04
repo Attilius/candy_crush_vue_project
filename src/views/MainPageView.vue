@@ -8,9 +8,8 @@
     </div>
     <div class="map">
       <div class="skin">
-        <div class="shine">
-          <div class="gift"></div>
-        </div>
+        <div class="shine rotate"></div>
+        <div class="gift"></div>
         <div class="levels successed-level" id="level-1" @click="start">
           <div class="level-stars three-stars"></div>
           1
@@ -296,7 +295,18 @@ export default {
   height: 50px;
   width: 50px;
   position: absolute;
-  top: 15px;
-  left: 15px;
+  top: 245px;
+  left: 35px;
+}
+
+.rotate {
+  transition: ease;
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotateZ(360deg);
+  }
 }
 </style>
