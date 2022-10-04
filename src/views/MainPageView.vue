@@ -10,6 +10,7 @@
       <div class="skin">
         <div class="shine rotate"></div>
         <div class="gift"></div>
+        <div class="shadow"></div>
         <div class="levels successed-level" id="level-1" @click="start">
           <div class="level-stars three-stars"></div>
           1
@@ -308,5 +309,16 @@ export default {
   100% {
     transform: rotateZ(360deg);
   }
+}
+
+.shadow {
+  height: 76px;
+  width: 77px;
+  border-radius: 100px;
+  background-color: rgba(0, 0, 0, .3);
+  position: absolute;
+  top: 232px;
+  left: 22px;
+  visibility: hidden;
 }
 </style>
