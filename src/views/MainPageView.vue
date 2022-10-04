@@ -292,4 +292,11 @@ export default {
   justify-content: center;
   align-items: center;
 }
+
+.gift {
+  background: url("../assets/images/gift.png") no-repeat center;
+  background-size: cover;
+  height: 50px;
+  width: 50px;
+}
 </style>
