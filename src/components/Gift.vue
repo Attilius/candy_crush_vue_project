@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div class="card">
+
+  </div>
 </template>
 
 <script>
@@ -15,5 +17,15 @@ export default {
 </script>
 
 <style>
-
+.card {
+  height: 515px;
+  width: 515px;
+  background: #fff8dc;
+  position: absolute;
+  left: 115px;
+  top: 145px;
+  border-radius: 20px;
+  visibility: visible;
+  z-index: 11;
+}
 </style>
