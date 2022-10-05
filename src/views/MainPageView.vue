@@ -10,7 +10,7 @@
       <div class="skin">
         <div class="shine rotate" id="shine"></div>
         <div class="gift shake" id="gift" @click="openGift"></div>
-
+        <Gift />
         <div class="levels successed-level" id="level-1" @click="start">
           <div class="level-stars three-stars"></div>
           1
@@ -40,12 +40,14 @@
 import Navbar from "@/components/Navbar.vue";
 import Header from "@/components/Header.vue";
 import router from "@/router/index.js";
+import Gift from "@/components/Gift.vue";
 
 export default {
   name: "MainPage",
   components: {
     Navbar,
     Header,
+    Gift
   },
 
   methods: {
