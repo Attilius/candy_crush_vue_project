@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-
+    <div class="cover"></div>
   </div>
 </template>
 
@@ -27,5 +27,18 @@ export default {
   border-radius: 20px;
   visibility: visible;
   z-index: 11;
+}
+
+.cover {
+  height: 515px;
+  width: 515px;
+  background: url("../assets/images/level_end_background.png");
+  background-size: cover;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
 }
 </style>
