@@ -8,9 +8,9 @@
     </div>
     <div class="map">
       <div class="skin">
-        <div class="shine rotate"></div>
+        <div class="shine rotate" id="shine"></div>
         <div class="gift shake" id="gift" @click="openGift"></div>
-        <div class="shadow"></div>
+
         <div class="levels successed-level" id="level-1" @click="start">
           <div class="level-stars three-stars"></div>
           1
@@ -64,6 +64,9 @@ export default {
 
     openGift() {
       document.getElementById('gift').classList.remove('shake');
+      document.getElementById('gift').classList.remove('gift');
+      document.getElementById('gift').classList.add('waiting-gift');
+      document.getElementById('shine').style.visibility = "hidden";
     }
   },
 };
@@ -315,15 +318,14 @@ export default {
   }
 }
 
-.shadow {
-  height: 76px;
-  width: 77px;
-  border-radius: 100px;
-  background-color: rgba(0, 0, 0, .3);
+.waiting-gift {
+  background: url("../assets/images/waiting_gift.png") no-repeat center;
+  background-size: cover;
+  height: 100px;
+  width: 100px;
   position: absolute;
-  top: 232px;
-  left: 22px;
-  visibility: hidden;
+  top: 220px;
+  left: 10px;
 }
 
 .shake {
