@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card" :style="{ visibility: visibility }">
     <div class="cover"></div>
   </div>
 </template>
@@ -7,6 +7,7 @@
 <script>
 export default {
     name: "Gift",
+    props: ["visibility"],
 
     data() {
         return {
