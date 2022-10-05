@@ -75,6 +75,7 @@ export default {
       document.getElementById('gift').classList.remove('gift');
       document.getElementById('gift').classList.add('waiting-gift');
       document.getElementById('shine').style.visibility = "hidden";
+      this.giftVisibility = "visible";
     }
   },
 };
