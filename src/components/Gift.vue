@@ -61,5 +61,21 @@ export default {
   font-family: "Emilys Candy", cursive;
 }
 
+.exit,
+.again {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #fff8dc;
+  font-size: 33px;
+  font-weight: 700;
+  text-shadow: -2px 0 firebrick, 0 2px firebrick, 2px 0 firebrick,
+    0 -2px firebrick;
+  position: absolute;
+}
+
 
 </style>
