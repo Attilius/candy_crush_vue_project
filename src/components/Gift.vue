@@ -5,7 +5,8 @@
         <i class="fa-solid fa-xmark"></i>
       </div>
       <div class="buttonGroup">
-        <div class="again" @click="toClaim">Claim</div>
+        <div v-if="displayClaim" class="again" @click="toClaim">Claim</div>
+        <div v-else class="again" @click="toContinue">Continue</div>
       </div>
     </div>
   </div>
@@ -18,7 +19,8 @@ export default {
 
     data() {
         return {
-            prizes: [50, 75, 100, 125, 150, 200, 250]
+            prizes: [50, 75, 100, 125, 150, 200, 250],
+            displayClaim: true
         }
     },
 
@@ -28,7 +30,11 @@ export default {
       },
 
       toClaim() {
-        console.log('claimed prize')
+        this.displayClaim = false;
+      },
+
+      toContinue() {
+        console.log('get prize')
       }
     }
 }
