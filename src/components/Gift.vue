@@ -5,7 +5,7 @@
         <i class="fa-solid fa-xmark"></i>
       </div>
       <div class="buttonGroup">
-        <div class="again">Claim</div>
+        <div class="again" @click="toClaim">Claim</div>
       </div>
     </div>
   </div>
@@ -25,6 +25,10 @@ export default {
     methods: {
       backToMain() {
         console.log('close and return')
+      },
+
+      toClaim() {
+        console.log('claimed prize')
       }
     }
 }
