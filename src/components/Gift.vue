@@ -5,6 +5,7 @@
       <div class="exit" id="exit" @click="backToMain">
         <i class="fa-solid fa-xmark"></i>
       </div>
+      <h2 v-if="currentPrize" class="currentPrize">{{ currentPrize }}</h2>
       <div class="buttonGroup">
         <div v-if="displayClaim" class="again" @click="toClaim">Claim</div>
         <div v-else class="again" @click="toContinue">Continue</div>
@@ -21,7 +22,8 @@ export default {
     data() {
         return {
             prizes: [50, 75, 100, 125, 150, 200, 250],
-            displayClaim: true
+            displayClaim: true,
+            currentPrize: 0
         }
     },
 
@@ -31,6 +33,9 @@ export default {
       },
 
       toClaim() {
+        const size = this.prizes.length;
+        const randomIndex = Math.floor(Math.random()*size);
+        this.currentPrize = this.prizes[randomIndex];
         this.displayClaim = false;
       },
 
@@ -122,6 +127,16 @@ export default {
 }
 
 #title {
+  position: relative;
+  top: -45px;
+  color: #fff8dc;
+  text-align: center;
+  font-family: "Emilys Candy", cursive;
+  font-size: 50px;
+  text-shadow: -2px 0 firebrick, 0 2px firebrick, 2px 0 firebrick, 0 -2px firebrick;
+}
+
+.currentPrize {
   position: relative;
   top: -45px;
   color: #fff8dc;
