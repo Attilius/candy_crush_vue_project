@@ -77,5 +77,14 @@ export default {
   position: absolute;
 }
 
+.exit {
+  background: url("../assets/images/magenta_button.png") no-repeat center;
+  background-size: cover;
+  height: 50px;
+  width: 50px;
+  top: 10px;
+  right: 10px;
+}
+
 
 </style>
