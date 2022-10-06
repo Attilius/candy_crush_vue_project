@@ -99,5 +99,8 @@ export default {
   bottom: 50px;
 }
 
-
+.again:active {
+  height: 68px;
+  width: 148px;
+}
 </style>
