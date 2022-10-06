@@ -50,5 +50,16 @@ export default {
   border-radius: 20px;
 }
 
+.buttonGroup {
+  width: 100%;
+  height: 10%;
+  position: relative;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Emilys Candy", cursive;
+}
+
 
 </style>
