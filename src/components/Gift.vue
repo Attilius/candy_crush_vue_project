@@ -1,6 +1,7 @@
 <template>
   <div class="card" :style="{ visibility: visibility }">
     <div class="cover">
+      <h1 id="title">Gift</h1>
       <div class="exit" id="exit" @click="backToMain">
         <i class="fa-solid fa-xmark"></i>
       </div>
@@ -118,5 +119,15 @@ export default {
 .again:active {
   height: 68px;
   width: 148px;
+}
+
+#title {
+  position: relative;
+  top: -45px;
+  color: #fff8dc;
+  text-align: center;
+  font-family: "Emilys Candy", cursive;
+  font-size: 50px;
+  text-shadow: -2px 0 firebrick, 0 2px firebrick, 2px 0 firebrick, 0 -2px firebrick;
 }
 </style>
