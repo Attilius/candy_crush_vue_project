@@ -91,5 +91,13 @@ export default {
   width: 48px;
 }
 
+.again {
+  background: url("../assets/images/green_long_button.png") no-repeat center;
+  background-size: cover;
+  height: 70px;
+  width: 150px;
+  bottom: 50px;
+}
+
 
 </style>
