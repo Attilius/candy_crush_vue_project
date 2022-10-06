@@ -1,6 +1,13 @@
 <template>
   <div class="card" :style="{ visibility: visibility }">
-    <div class="cover"></div>
+    <div class="cover">
+      <div class="exit" id="exit" @click="backToMain">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="buttonGroup">
+        <div class="again">Claim</div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -42,4 +49,6 @@ export default {
   align-items: center;
   border-radius: 20px;
 }
+
+
 </style>
