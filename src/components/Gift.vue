@@ -86,5 +86,10 @@ export default {
   right: 10px;
 }
 
+.exit:active {
+  height: 48px;
+  width: 48px;
+}
+
 
 </style>
