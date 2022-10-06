@@ -20,6 +20,12 @@ export default {
         return {
             prizes: [50, 75, 100, 125, 150, 200, 250]
         }
+    },
+
+    methods: {
+      backToMain() {
+        console.log('close and return')
+      }
     }
 }
 </script>
