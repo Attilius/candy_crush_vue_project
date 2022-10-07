@@ -6,6 +6,7 @@
         <i class="fa-solid fa-xmark"></i>
       </div>
       <div v-if="currentPrize" class="currentPrize">{{ currentPrize }}</div>
+      <div v-if="currentPrize" class="currentPrizeBackground rotate"></div>
       <img
           v-else
           src="../assets/images/gift.png"
@@ -150,16 +151,21 @@ export default {
   text-shadow: -2px 0 firebrick, 0 2px firebrick, 2px 0 firebrick, 0 -2px firebrick;
 }
 
-.currentPrize {
+.currentPrizeBackground {
   background: url("../assets/images/shine.png") no-repeat center;
   background-size: cover;
   height: 163px;
   width: 163px;
+  margin-bottom: 120px;
+}
+
+.currentPrize {
+  position: absolute;
+  top: 205px;
+  z-index: 11;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  top: 0;
   color: #fff8dc;
   text-align: center;
   font-family: "Emilys Candy", cursive;
@@ -167,7 +173,18 @@ export default {
   text-shadow: -2px 0 firebrick, 0 2px firebrick, 2px 0 firebrick, 0 -2px firebrick;
 }
 
-#gift, .currentPrize {
+#gift {
   margin-bottom: 120px;
+}
+
+.rotate {
+  transition: ease;
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotateZ(360deg);
+  }
 }
 </style>
