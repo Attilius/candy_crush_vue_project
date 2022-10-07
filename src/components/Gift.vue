@@ -46,7 +46,7 @@ export default {
       },
 
       toContinue() {
-        console.log('get prize')
+        this.setGiftVisibility();
       },
 
       setGiftVisibility() {
