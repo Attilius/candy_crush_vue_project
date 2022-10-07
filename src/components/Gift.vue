@@ -5,7 +5,13 @@
       <div class="exit" id="exit" @click="backToMain">
         <i class="fa-solid fa-xmark"></i>
       </div>
-      <h2 v-if="currentPrize" class="currentPrize">{{ currentPrize }}</h2>
+      <div v-if="currentPrize" class="currentPrize">{{ currentPrize }}</div>
+      <img
+          v-else
+          src="../assets/images/gift.png"
+          id="gift"
+          alt="gift"
+        />
       <div class="buttonGroup">
         <div v-if="displayClaim" class="again" @click="toClaim">Claim</div>
         <div v-else class="again" @click="toContinue">Continue</div>
@@ -137,12 +143,23 @@ export default {
 }
 
 .currentPrize {
+  background: url("../assets/images/shine.png") no-repeat center;
+  background-size: cover;
+  height: 163px;
+  width: 163px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  top: -45px;
+  top: 0;
   color: #fff8dc;
   text-align: center;
   font-family: "Emilys Candy", cursive;
   font-size: 50px;
   text-shadow: -2px 0 firebrick, 0 2px firebrick, 2px 0 firebrick, 0 -2px firebrick;
+}
+
+#gift, .currentPrize {
+  margin-bottom: 120px;
 }
 </style>
