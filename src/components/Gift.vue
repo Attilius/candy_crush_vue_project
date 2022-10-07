@@ -39,9 +39,7 @@ export default {
       },
 
       toClaim() {
-        const size = this.prizes.length;
-        const randomIndex = Math.floor(Math.random()*size);
-        this.currentPrize = this.prizes[randomIndex];
+        this.getRandomPrize();
         this.displayClaim = false;
       },
 
@@ -50,8 +48,14 @@ export default {
       },
 
       setGiftVisibility() {
-      this.$emit('updateGiftVisibility', 'hidden');
-    },
+        this.$emit('updateGiftVisibility', 'hidden');
+      },
+
+      getRandomPrize() {
+        const size = this.prizes.length;
+        const randomIndex = Math.floor(Math.random()*size);
+        this.currentPrize = this.prizes[randomIndex];
+      }
     }
 }
 </script>
