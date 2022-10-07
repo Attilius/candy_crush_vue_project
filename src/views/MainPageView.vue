@@ -15,6 +15,7 @@
         :visibility="giftVisibility" 
         @updateGiftVisibility="(setGiftVisibility) => (giftVisibility = setGiftVisibility)"
         @updateWaitingGift="(setWaitingGift) => (waitingGift = setWaitingGift)"
+        @updateCoins="(setCoins) => (coins += setCoins)"
         />
         <div class="levels successed-level" id="level-1" @click="start">
           <div class="level-stars three-stars"></div>
