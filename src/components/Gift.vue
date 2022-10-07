@@ -5,7 +5,10 @@
       <div class="exit" id="exit" @click="backToMain">
         <i class="fa-solid fa-xmark"></i>
       </div>
-      <div v-if="currentPrize" class="currentPrize">{{ currentPrize }}</div>
+      <div v-if="currentPrize" class="currentPrize">
+        {{ currentPrize }}
+        <div class="coin"></div>
+        </div>
       <div v-if="currentPrize" class="currentPrizeBackground rotate"></div>
       <img
           v-else
@@ -171,6 +174,13 @@ export default {
   font-family: "Emilys Candy", cursive;
   font-size: 50px;
   text-shadow: -2px 0 firebrick, 0 2px firebrick, 2px 0 firebrick, 0 -2px firebrick;
+}
+
+.coin {
+  height: 60px;
+  width: 60px;
+  background: url("../assets/images/coin.png") no-repeat center;
+  background-size: cover;
 }
 
 #gift {
