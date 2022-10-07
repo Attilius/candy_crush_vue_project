@@ -35,7 +35,7 @@ export default {
 
     methods: {
       backToMain() {
-        console.log('close and return')
+        this.setGiftVisibility();
       },
 
       toClaim() {
@@ -47,7 +47,11 @@ export default {
 
       toContinue() {
         console.log('get prize')
-      }
+      },
+
+      setGiftVisibility() {
+      this.$emit('updateGiftVisibility', 'hidden');
+    },
     }
 }
 </script>
