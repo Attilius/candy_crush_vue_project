@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <Navbar />
-    <Header />
+    <Header :coins="coins" />
     <div class="body">
       <div class="body-left"></div>
       <div class="body-right"></div>
@@ -58,7 +58,8 @@ export default {
   data() {
     return {
       giftVisibility: 'hidden',
-      waitingGift: false
+      waitingGift: false,
+      coins: 382
     }
   },
 
