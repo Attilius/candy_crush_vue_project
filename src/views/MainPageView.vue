@@ -10,7 +10,12 @@
       <div class="skin">
         <div class="shine rotate" id="shine"></div>
         <div class="gift shake" id="gift" @click="openGift"></div>
-        <Gift :visibility="giftVisibility" />
+        <h3 v-if="waitingGift" class="waitingGift">02:59:59</h3>
+        <Gift 
+        :visibility="giftVisibility" 
+        @updateGiftVisibility="(setGiftVisibility) => (giftVisibility = setGiftVisibility)"
+        @updateWaitingGift="(setWaitingGift) => (waitingGift = setWaitingGift)"
+        />
         <div class="levels successed-level" id="level-1" @click="start">
           <div class="level-stars three-stars"></div>
           1
@@ -52,7 +57,19 @@ export default {
 
   data() {
     return {
-      giftVisibility: 'hidden'
+      giftVisibility: 'hidden',
+      waitingGift: false
+    }
+  },
+
+  watch: {
+    waitingGift(newValue, oldValue) {
+      if (newValue) {
+        document.getElementById('shine').style.visibility = "hidden";
+        document.getElementById('gift').classList.remove('shake');
+        document.getElementById('gift').classList.remove('gift');
+        document.getElementById('gift').classList.add('waiting-gift');
+      }
     }
   },
 
@@ -71,10 +88,6 @@ export default {
     },
 
     openGift() {
-      document.getElementById('gift').classList.remove('shake');
-      document.getElementById('gift').classList.remove('gift');
-      document.getElementById('gift').classList.add('waiting-gift');
-      document.getElementById('shine').style.visibility = "hidden";
       this.giftVisibility = "visible";
     }
   },
@@ -335,6 +348,17 @@ export default {
   position: absolute;
   top: 220px;
   left: 10px;
+}
+
+.waitingGift {
+  position: absolute;
+  top: 280px;
+  left: 20px;
+  color: #fff8dc;
+  text-align: center;
+  font-family: "Emilys Candy", cursive;
+  font-size: 20px;
+  text-shadow: -2px 0 firebrick, 0 2px firebrick, 2px 0 firebrick, 0 -2px firebrick;
 }
 
 .shake {
