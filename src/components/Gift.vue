@@ -44,6 +44,7 @@ export default {
 
       toClaim() {
         this.getRandomPrize();
+        this.setWaitingGift();
         this.displayClaim = false;
       },
 
@@ -53,6 +54,10 @@ export default {
 
       setGiftVisibility() {
         this.$emit('updateGiftVisibility', 'hidden');
+      },
+
+      setWaitingGift() {
+        this.$emit('updateWaitingGift', true);
       },
 
       getRandomPrize() {
