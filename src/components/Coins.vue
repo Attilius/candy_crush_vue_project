@@ -1,13 +1,14 @@
 <template>
   <div class="coins">
     <div id="coin"></div>
-    <div id="available-coins">382</div>
+    <div id="available-coins">{{ coins }}</div>
   </div>
 </template>
 
 <script>
 export default {
   name: "Coins",
+  props: ['coins']
 };
 </script>
 
