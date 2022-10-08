@@ -24,7 +24,7 @@
 
 <script>
 // @ is an alias to /src
-import Navbar from "../components/Navbar.vue";
+import Navbar from "@/components/Navbar.vue";
 import ScoreBoard from "../components/ScoreBoard.vue";
 import GameTable from "../components/GameTable.vue";
 import SugarCrush from "../components/SugarCrush.vue";
