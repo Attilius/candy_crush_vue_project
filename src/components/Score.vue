@@ -300,7 +300,7 @@ export default {
   z-index: 11;
 }
 
-#current-score{
+#current-score {
   text-align: center;
   font-size: 45px;
   font-family: "Emilys Candy", cursive;
