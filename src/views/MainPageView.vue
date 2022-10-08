@@ -10,12 +10,16 @@
       <div class="skin">
         <div class="shine rotate" id="shine"></div>
         <div class="gift shake" id="gift" @click="openGift"></div>
-        <h3 v-if="waitingGift" class="waitingGift">{{waitingGiftTime}}</h3>
-        <Gift 
-        :visibility="giftVisibility" 
-        @updateGiftVisibility="(setGiftVisibility) => (giftVisibility = setGiftVisibility)"
-        @updateWaitingGift="(setWaitingGift) => (waitingGift = setWaitingGift)"
-        @updateCoins="(setCoins) => (coins += setCoins)"
+        <h3 v-if="waitingGift" class="waitingGift">{{ waitingGiftTime }}</h3>
+        <Gift
+          :visibility="giftVisibility"
+          @updateGiftVisibility="
+            (setGiftVisibility) => (giftVisibility = setGiftVisibility)
+          "
+          @updateWaitingGift="
+            (setWaitingGift) => (waitingGift = setWaitingGift)
+          "
+          @updateCoins="(setCoins) => (coins += setCoins)"
         />
         <div class="levels successed-level" id="level-1" @click="start">
           <div class="level-stars three-stars"></div>
@@ -53,16 +57,16 @@ export default {
   components: {
     Navbar,
     Header,
-    Gift
+    Gift,
   },
 
   data() {
     return {
-      giftVisibility: 'hidden',
+      giftVisibility: "hidden",
       waitingGift: false,
       coins: 382,
-      waitingGiftTime: ''
-    }
+      waitingGiftTime: "",
+    };
   },
 
   mounted() {
@@ -72,17 +76,17 @@ export default {
   watch: {
     waitingGift(newValue, oldValue) {
       if (newValue) {
-        document.getElementById('shine').style.visibility = "hidden";
-        document.getElementById('gift').classList.remove('shake');
-        document.getElementById('gift').classList.remove('gift');
-        document.getElementById('gift').classList.add('waiting-gift');
+        document.getElementById("shine").style.visibility = "hidden";
+        document.getElementById("gift").classList.remove("shake");
+        document.getElementById("gift").classList.remove("gift");
+        document.getElementById("gift").classList.add("waiting-gift");
       } else {
-        document.getElementById('shine').style.visibility = "visible";
-        document.getElementById('gift').classList.add('shake');
-        document.getElementById('gift').classList.add('gift');
-        document.getElementById('gift').classList.remove('waiting-gift');
+        document.getElementById("shine").style.visibility = "visible";
+        document.getElementById("gift").classList.add("shake");
+        document.getElementById("gift").classList.add("gift");
+        document.getElementById("gift").classList.remove("waiting-gift");
       }
-    }
+    },
   },
 
   methods: {
@@ -103,33 +107,33 @@ export default {
       this.giftVisibility = "visible";
     },
 
-    timeCountDownOfNewGift(){
+    timeCountDownOfNewGift() {
       let hour = 2;
       let min = 59;
       let sec = 61;
       let timecounter = "";
 
-      let h = '';
-      let m = '';
-      let s = '';
+      let h = "";
+      let m = "";
+      let s = "";
 
       const timer = setInterval(() => {
         if (sec > 0) {
           sec--;
           s = ":" + sec;
           if (sec < 10) {
-            s =":0" + sec;
+            s = ":0" + sec;
           }
         }
 
         if (min < 10) {
-            m = ":0" + min;
+          m = ":0" + min;
         } else {
           m = ":" + min;
         }
 
         if (hour < 10) {
-            h = "0" + hour;
+          h = "0" + hour;
         } else {
           h = ":" + hour;
         }
@@ -150,12 +154,9 @@ export default {
         if (hour === 0 && min === 0 && sec === 0) {
           clearInterval(timer);
           this.waitingGift = false;
-        }
-        else this.waitingGiftTime = timecounter;
-
-        
+        } else this.waitingGiftTime = timecounter;
       }, 1000);
-    }
+    },
   },
 };
 </script>
@@ -424,12 +425,13 @@ export default {
   text-align: center;
   font-family: "Emilys Candy", cursive;
   font-size: 20px;
-  text-shadow: -2px 0 firebrick, 0 2px firebrick, 2px 0 firebrick, 0 -2px firebrick;
+  text-shadow: -2px 0 firebrick, 0 2px firebrick, 2px 0 firebrick,
+    0 -2px firebrick;
 }
 
 .shake {
   transition: all ease;
-  animation: shake .9s alternate infinite;
+  animation: shake 0.9s alternate infinite;
 }
 
 @keyframes shake {
