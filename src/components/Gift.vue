@@ -26,7 +26,7 @@ export default {
 
   data() {
     return {
-      prizes: [50, 75, 100, 125, 150, 200, 250],
+      prizes: [50, 75, 100, 125, 150, 200, 225, 250],
       displayClaim: true,
       currentPrize: 0,
     };
