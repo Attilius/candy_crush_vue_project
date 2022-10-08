@@ -45,6 +45,7 @@ export default {
       toClaim() {
         this.getRandomPrize();
         this.setWaitingGift();
+        this.setCoins();
         this.displayClaim = false;
       },
 
@@ -58,6 +59,10 @@ export default {
 
       setWaitingGift() {
         this.$emit('updateWaitingGift', true);
+      },
+
+      setCoins(){
+        this.$emit('updateCoins', this.currentPrize)
       },
 
       getRandomPrize() {
