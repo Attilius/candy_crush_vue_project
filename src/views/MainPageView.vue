@@ -10,7 +10,7 @@
       <div class="skin">
         <div class="shine rotate" id="shine"></div>
         <div class="gift shake" id="gift" @click="openGift"></div>
-        <h3 v-if="waitingGift" class="waitingGift">02:59:59</h3>
+        <h3 v-if="waitingGift" class="waitingGift">{{waitingGiftTime}}</h3>
         <Gift 
         :visibility="giftVisibility" 
         @updateGiftVisibility="(setGiftVisibility) => (giftVisibility = setGiftVisibility)"
@@ -60,8 +60,13 @@ export default {
     return {
       giftVisibility: 'hidden',
       waitingGift: false,
-      coins: 382
+      coins: 382,
+      waitingGiftTime: ''
     }
+  },
+
+  mounted() {
+    this.timeCountDownOfNewGift();
   },
 
   watch: {
@@ -71,6 +76,11 @@ export default {
         document.getElementById('gift').classList.remove('shake');
         document.getElementById('gift').classList.remove('gift');
         document.getElementById('gift').classList.add('waiting-gift');
+      } else {
+        document.getElementById('shine').style.visibility = "visible";
+        document.getElementById('gift').classList.add('shake');
+        document.getElementById('gift').classList.add('gift');
+        document.getElementById('gift').classList.remove('waiting-gift');
       }
     }
   },
@@ -91,6 +101,60 @@ export default {
 
     openGift() {
       this.giftVisibility = "visible";
+    },
+
+    timeCountDownOfNewGift(){
+      let hour = 2;
+      let min = 59;
+      let sec = 61;
+      let timecounter = "";
+
+      let h = '';
+      let m = '';
+      let s = '';
+
+      const timer = setInterval(() => {
+        if (sec > 0) {
+          sec--;
+          s = ":" + sec;
+          if (sec < 10) {
+            s =":0" + sec;
+          }
+        }
+
+        if (min < 10) {
+            m = ":0" + min;
+        } else {
+          m = ":" + min;
+        }
+
+        if (hour < 10) {
+            h = "0" + hour;
+        } else {
+          h = ":" + hour;
+        }
+
+        if (min > 0 && sec === 0) {
+          min--;
+          sec = 60;
+        }
+
+        if (hour > 0 && min === 0 && sec === 0) {
+          hour--;
+          min = 59;
+          sec = 60;
+        }
+
+        timecounter = h + m + s;
+
+        if (hour === 0 && min === 0 && sec === 0) {
+          clearInterval(timer);
+          this.waitingGift = false;
+        }
+        else this.waitingGiftTime = timecounter;
+
+        
+      }, 1000);
     }
   },
 };
