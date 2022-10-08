@@ -54,7 +54,7 @@ export default {
           sec--;
           timecounter = "0" + min + ":" + sec;
           if (sec < 10) {
-            timecounter = "0" + min + ":" + "0" + sec;
+            timecounter = "0" + min + ":0" + sec;
           }
         }
 
