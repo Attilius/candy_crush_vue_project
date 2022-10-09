@@ -113,6 +113,10 @@ export default {
       this.giftVisibility = "visible";
     },
 
+    changeGiftTimeCounterInStore(value) {
+      this.$store.commit('changeGiftTimeCounter', value);
+    },
+
     timeCountDownOfNewGift() {
       let hour = 2;
       let min = 59;
