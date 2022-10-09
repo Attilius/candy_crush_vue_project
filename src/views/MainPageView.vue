@@ -90,7 +90,9 @@ export default {
   },
 
   computed: {
-    
+    setGiftTimeCounter() {
+      return this.$store.getters.giftTimeCounter;
+    }
   },
 
   methods: {
