@@ -127,6 +127,26 @@ export default {
       let s = "";
 
       const timer = setInterval(() => {
+        if (this.$store.getters.giftTimeCounter !== '') {
+        hour = parseInt(this.$store.getters.giftTimeCounter.split(':')[0].split('')[1]);
+        
+        if (parseInt(this.$store.getters.giftTimeCounter.split(':')[1]) > 9) {
+          min = parseInt(this.$store.getters.giftTimeCounter.split(':')[1]);
+        } else {
+          min = parseInt(this.$store.getters.giftTimeCounter.split(':')[1].split('')[1]);
+        }
+
+        if (parseInt(this.$store.getters.giftTimeCounter.split(':')[1]) > 9) {
+          sec = parseInt(this.$store.getters.giftTimeCounter.split(':')[2]);
+        } else {
+          sec = parseInt(this.$store.getters.giftTimeCounter.split(':')[2].split('')[1]);
+        }
+      } else {
+        let hour = 2;
+        let min = 59;
+        let sec = 61;
+      }
+
         if (sec > 0) {
           sec--;
           s = ":" + sec;
