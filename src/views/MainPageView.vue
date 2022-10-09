@@ -64,8 +64,7 @@ export default {
     return {
       giftVisibility: "hidden",
       waitingGift: false,
-      coins: 382,
-      waitingGiftTime: "",
+      coins: 382
     };
   },
 
