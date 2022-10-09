@@ -164,7 +164,7 @@ export default {
         if (hour === 0 && min === 0 && sec === 0) {
           clearInterval(timer);
           this.waitingGift = false;
-        } else this.waitingGiftTime = timecounter;
+        } else this.changeGiftTimeCounterInStore(timecounter);
       }, 1000);
     },
   },
