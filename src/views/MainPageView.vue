@@ -117,9 +117,6 @@ export default {
     },
 
     timeCountDownOfNewGift() {
-      let hour = 2;
-      let min = 59;
-      let sec = 61;
       let timecounter = "";
 
       let h = "";
@@ -129,7 +126,7 @@ export default {
       const timer = setInterval(() => {
         if (this.$store.getters.giftTimeCounter !== '') {
         hour = parseInt(this.$store.getters.giftTimeCounter.split(':')[0].split('')[1]);
-        
+
         if (parseInt(this.$store.getters.giftTimeCounter.split(':')[1]) > 9) {
           min = parseInt(this.$store.getters.giftTimeCounter.split(':')[1]);
         } else {
