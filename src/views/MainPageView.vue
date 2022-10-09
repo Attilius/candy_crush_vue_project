@@ -10,7 +10,7 @@
       <div class="skin">
         <div class="shine rotate" id="shine"></div>
         <div class="gift shake" id="gift" @click="openGift"></div>
-        <h3 v-if="waitingGift" class="waitingGift">{{ waitingGiftTime }}</h3>
+        <h3 v-if="waitingGift" class="waitingGift">{{ setGiftTimeCounter }}</h3>
         <Gift
           :visibility="giftVisibility"
           @updateGiftVisibility="
