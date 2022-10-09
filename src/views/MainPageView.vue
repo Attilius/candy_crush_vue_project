@@ -89,6 +89,10 @@ export default {
     },
   },
 
+  computed: {
+    
+  },
+
   methods: {
     start(e) {
       if (this.$store.state.life > 0) {
