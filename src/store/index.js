@@ -281,6 +281,10 @@ export default new Vuex.Store({
 
         changeLifeStatus(state, value) {
             state.life_status = value;
+        },
+
+        changeGiftTimeCounter(state, value) {
+            state.gift_time_counter = value;
         }
     },
     actions: {},
