@@ -264,6 +264,10 @@ export default new Vuex.Store({
 
         lifeStatus(state) {
             return state.life_status;
+        },
+
+        giftTimeCounter(state) {
+            return state.gift_time_counter;
         }
     },
     mutations: {
