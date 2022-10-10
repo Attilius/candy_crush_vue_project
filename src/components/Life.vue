@@ -65,8 +65,6 @@ export default {
 
         if (this.$store.getters.life <= 19 && min === 0 && sec === 0) {
           this.changeLifeInStore();
-          min = 0;
-          sec = 10;
         }
 
         if (this.$store.getters.life < 20) {
