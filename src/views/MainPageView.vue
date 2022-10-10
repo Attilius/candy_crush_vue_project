@@ -184,7 +184,6 @@ export default {
           clearInterval(timer);
           this.waitingGift = false;
         } else this.changeGiftTimeCounterInStore(timecounter);
-        //console.log(timecounter)
       }, 1000);
     },
   },
