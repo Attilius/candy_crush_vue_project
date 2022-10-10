@@ -145,7 +145,11 @@ export default {
             sec = 60;
           }
         }
-      } 
+      } else {
+        hour = 1;
+        min = 1;
+        sec = 60;
+      }
 
         if (sec > 0) {
           sec--;
@@ -169,13 +173,6 @@ export default {
           h = ":" + hour;
         }
 
-        
-
-        if (hour > 0 && min === 0 && sec === 0) {
-          hour--;
-          min = 59;
-          sec = 60;
-        }
 
         timecounter = h + m + s;
 
