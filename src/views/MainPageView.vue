@@ -64,7 +64,7 @@ export default {
     return {
       giftVisibility: "hidden",
       waitingGift: false,
-      coins: 382
+      coins: 382,
     };
   },
 
@@ -91,7 +91,7 @@ export default {
   computed: {
     setGiftTimeCounter() {
       return this.$store.getters.giftTimeCounter;
-    }
+    },
   },
 
   methods: {
@@ -113,7 +113,7 @@ export default {
     },
 
     changeGiftTimeCounterInStore(value) {
-      this.$store.commit('changeGiftTimeCounter', value);
+      this.$store.commit("changeGiftTimeCounter", value);
     },
 
     timeCountDownOfNewGift() {
@@ -127,34 +127,40 @@ export default {
       let s = "";
 
       const timer = setInterval(() => {
-        if (this.$store.getters.giftTimeCounter !== '') {
-        hour = parseInt(this.$store.getters.giftTimeCounter.split(':')[0].split('')[1]);
-        
-        if (parseInt(this.$store.getters.giftTimeCounter.split(':')[1]) > 9) {
-          min = parseInt(this.$store.getters.giftTimeCounter.split(':')[1]);
-        } else {
-          min = parseInt(this.$store.getters.giftTimeCounter.split(':')[1].split('')[1]);
-        }
+        if (this.$store.getters.giftTimeCounter !== "") {
+          hour = parseInt(
+            this.$store.getters.giftTimeCounter.split(":")[0].split("")[1]
+          );
 
-        if (parseInt(this.$store.getters.giftTimeCounter.split(':')[2]) > 9) {
-          sec = parseInt(this.$store.getters.giftTimeCounter.split(':')[2]);
+          if (parseInt(this.$store.getters.giftTimeCounter.split(":")[1]) > 9) {
+            min = parseInt(this.$store.getters.giftTimeCounter.split(":")[1]);
+          } else {
+            min = parseInt(
+              this.$store.getters.giftTimeCounter.split(":")[1].split("")[1]
+            );
+          }
+
+          if (parseInt(this.$store.getters.giftTimeCounter.split(":")[2]) > 9) {
+            sec = parseInt(this.$store.getters.giftTimeCounter.split(":")[2]);
+          } else {
+            sec = parseInt(
+              this.$store.getters.giftTimeCounter.split(":")[2].split("")[1]
+            );
+            if (hour > 0 && min === 0 && sec === 0) {
+              hour--;
+              min = 59;
+              sec = 60;
+            }
+            if (sec === 0 && min > 0) {
+              min--;
+              sec = 60;
+            }
+          }
         } else {
-          sec = parseInt(this.$store.getters.giftTimeCounter.split(':')[2].split('')[1]);
-          if (hour > 0 && min === 0 && sec === 0) {
-          hour--;
+          hour = 2;
           min = 59;
           sec = 60;
         }
-          if (sec === 0 && min > 0) {
-            min--;
-            sec = 60;
-          }
-        }
-      } else {
-        hour = 2;
-        min = 59;
-        sec = 60;
-      }
 
         if (sec > 0) {
           sec--;
@@ -181,7 +187,7 @@ export default {
         if (hour === 0 && min === 0 && sec === 0) {
           clearInterval(timer);
           this.waitingGift = false;
-          this.changeGiftTimeCounterInStore('');
+          this.changeGiftTimeCounterInStore("");
         } else this.changeGiftTimeCounterInStore(timecounter);
       }, 1000);
     },
