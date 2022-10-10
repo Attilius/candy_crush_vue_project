@@ -140,6 +140,11 @@ export default {
           sec = parseInt(this.$store.getters.giftTimeCounter.split(':')[2]);
         } else {
           sec = parseInt(this.$store.getters.giftTimeCounter.split(':')[2].split('')[1]);
+          if (hour > 0 && min === 0 && sec === 0) {
+          hour--;
+          min = 59;
+          sec = 60;
+        }
           if (sec === 0 && min > 0) {
             min--;
             sec = 60;
