@@ -151,7 +151,7 @@ export default {
           }
         }
       } else {
-        hour = 1;
+        hour = 0;
         min = 1;
         sec = 60;
       }
@@ -181,6 +181,7 @@ export default {
         if (hour === 0 && min === 0 && sec === 0) {
           clearInterval(timer);
           this.waitingGift = false;
+          this.changeGiftTimeCounterInStore('');
         } else this.changeGiftTimeCounterInStore(timecounter);
       }, 1000);
     },
