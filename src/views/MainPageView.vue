@@ -140,12 +140,12 @@ export default {
           sec = parseInt(this.$store.getters.giftTimeCounter.split(':')[2]);
         } else {
           sec = parseInt(this.$store.getters.giftTimeCounter.split(':')[2].split('')[1]);
+          if (sec === 0 && min > 0) {
+            min--;
+            sec = 60;
+          }
         }
-      } else {
-        hour = 2;
-        min = 59;
-        sec = 60;
-      }
+      } 
 
         if (sec > 0) {
           sec--;
@@ -154,6 +154,8 @@ export default {
             s = ":0" + sec;
           }
         }
+
+       
 
         if (min < 10) {
           m = ":0" + min;
@@ -167,10 +169,7 @@ export default {
           h = ":" + hour;
         }
 
-        if (min > 0 && sec === 0) {
-          min--;
-          sec = 60;
-        }
+        
 
         if (hour > 0 && min === 0 && sec === 0) {
           hour--;
