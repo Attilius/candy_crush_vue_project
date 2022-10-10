@@ -117,6 +117,9 @@ export default {
     },
 
     timeCountDownOfNewGift() {
+      let hour = 0;
+      let min = 0;
+      let sec = 0;
       let timecounter = "";
 
       let h = "";
@@ -126,22 +129,22 @@ export default {
       const timer = setInterval(() => {
         if (this.$store.getters.giftTimeCounter !== '') {
         hour = parseInt(this.$store.getters.giftTimeCounter.split(':')[0].split('')[1]);
-
+        
         if (parseInt(this.$store.getters.giftTimeCounter.split(':')[1]) > 9) {
           min = parseInt(this.$store.getters.giftTimeCounter.split(':')[1]);
         } else {
           min = parseInt(this.$store.getters.giftTimeCounter.split(':')[1].split('')[1]);
         }
 
-        if (parseInt(this.$store.getters.giftTimeCounter.split(':')[1]) > 9) {
+        if (parseInt(this.$store.getters.giftTimeCounter.split(':')[2]) > 9) {
           sec = parseInt(this.$store.getters.giftTimeCounter.split(':')[2]);
         } else {
           sec = parseInt(this.$store.getters.giftTimeCounter.split(':')[2].split('')[1]);
         }
       } else {
-        let hour = 2;
-        let min = 59;
-        let sec = 61;
+        hour = 2;
+        min = 59;
+        sec = 60;
       }
 
         if (sec > 0) {
@@ -181,6 +184,7 @@ export default {
           clearInterval(timer);
           this.waitingGift = false;
         } else this.changeGiftTimeCounterInStore(timecounter);
+        //console.log(timecounter)
       }, 1000);
     },
   },
