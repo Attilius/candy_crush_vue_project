@@ -165,7 +165,6 @@ export default {
         }
 
        
-
         if (min < 10) {
           m = ":0" + min;
         } else {
