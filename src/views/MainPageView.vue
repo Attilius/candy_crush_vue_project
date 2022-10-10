@@ -178,7 +178,6 @@ export default {
           h = ":" + hour;
         }
 
-
         timecounter = h + m + s;
 
         if (hour === 0 && min === 0 && sec === 0) {
