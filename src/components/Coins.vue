@@ -21,7 +21,7 @@ export default {
     height: 60%;
 }
 
-#available-coins{
+#available-coins {
     height: 100%;
     width: 100%;
     border-radius: 50px;
