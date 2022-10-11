@@ -68,10 +68,6 @@ export default {
     };
   },
 
-  mounted() {
-    this.timeCountDownOfNewGift();
-  },
-
   watch: {
     waitingGift(newValue, oldValue) {
       if (newValue) {
@@ -79,6 +75,7 @@ export default {
         document.getElementById("gift").classList.remove("shake");
         document.getElementById("gift").classList.remove("gift");
         document.getElementById("gift").classList.add("waiting-gift");
+        this.timeCountDownOfNewGift();
       } else {
         document.getElementById("shine").style.visibility = "visible";
         document.getElementById("gift").classList.add("shake");
