@@ -6,6 +6,10 @@ const bonusCandies = [
     {
         src: "Blue-Striped-Verical.png",
         alt: 'blue'
+    },
+    {
+        src: "Blue-Wrapped.png",
+        alt: 'blue'
     }
 ];
 
