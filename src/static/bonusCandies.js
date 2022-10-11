@@ -46,6 +46,18 @@ const bonusCandies = [
     {
         src: "Purple-Wrapped.png",
         alt: 'purple'
+    },
+    {
+        src: "Red-Striped-Horizontal.png",
+        alt: 'red'
+    },
+    {
+        src: "Red-Striped-Verical.png",
+        alt: 'red'
+    },
+    {
+        src: "Red-Wrapped.png",
+        alt: 'red'
     }
 ];
 
