@@ -269,6 +269,10 @@ export default new Vuex.Store({
 
         giftTimeCounter(state) {
             return state.gift_time_counter;
+        },
+
+        score() {
+            return state.score;
         }
     },
     mutations: {
