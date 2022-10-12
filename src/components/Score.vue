@@ -241,12 +241,12 @@ export default {
     },
 
     color(newValue, oldValue) {
-      if (newValue !== '') {
+      if (newValue !== "") {
         const score = document.getElementById("current-score");
 
         score.style.textShadow = `-3px 0 ${newValue}, 0 3px ${newValue}, 3px 0 ${newValue}, 0 -3px ${newValue}`;
       }
-    }
+    },
   },
 
   methods: {
@@ -259,29 +259,31 @@ export default {
     },
 
     resetGetScore() {
-      this.$emit('resetGetScore', 0);
+      this.$emit("resetGetScore", 0);
     },
 
     moveScore(score) {
       const rect = score.getBoundingClientRect();
 
-      score.animate([
-        // keyframes
-        { 
-          top: `${rect.top}px`,
-          left: `${rect.left}px`
-        },
-        { 
-          top: '240px',
-          left: '330px'
+      score.animate(
+        [
+          // keyframes
+          {
+            top: `${rect.top}px`,
+            left: `${rect.left}px`,
+          },
+          {
+            top: "240px",
+            left: "330px",
+          },
+        ],
+        {
+          // timing options
+          duration: 700,
+          iterations: 1,
         }
-        ], {
-        // timing options
-        duration: 700,
-        iterations: 1
-      });
-    }
-
+      );
+    },
   },
 };
 </script>
