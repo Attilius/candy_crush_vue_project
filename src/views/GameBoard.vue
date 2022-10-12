@@ -12,10 +12,10 @@
       />
       <SugarCrush :visibility="sugarCrushVisibility" />
       <LevelEndBoard :visibility="levelEndVisibility" />
-      <Score 
-        :score="getScore" 
-        :index="index" 
-        :color="color" 
+      <Score
+        :score="getScore"
+        :index="index"
+        :color="color"
         @resetGetScore="(resetGetScore) => (getScore = resetGetScore)"
       />
     </div>
@@ -39,7 +39,7 @@ export default {
     GameTable,
     SugarCrush,
     LevelEndBoard,
-    Score
+    Score,
   },
 
   data() {
@@ -48,25 +48,24 @@ export default {
       score: 0,
       getScore: 0,
       index: 0,
-      color: '',
-      sugarCrushVisibility: 'hidden',
-      levelEndVisibility: 'hidden'
+      color: "",
+      sugarCrushVisibility: "hidden",
+      levelEndVisibility: "hidden",
     };
   },
 
   watch: {
     score(newValue, oldValue) {
       if (newValue >= 500) {
-        this.sugarCrushVisibility = 'visible';
+        this.sugarCrushVisibility = "visible";
       }
     },
-     moves(newValue, oldValue) {
+    moves(newValue, oldValue) {
       if (newValue === 0) {
-        this.levelEndVisibility = 'visible';
+        this.levelEndVisibility = "visible";
       }
-     }
-  }
-
+    },
+  },
 };
 </script>
 
