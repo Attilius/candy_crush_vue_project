@@ -31,7 +31,7 @@ export default {
   data() {
     return {
       drag_start: "",
-      drag_drop: ""
+      drag_drop: "",
     };
   },
 
@@ -97,9 +97,14 @@ export default {
         }
 
         try {
-          if ( this.$store.state.candies[i + 7].image === blank && !isFixedField) {
-            this.$store.state.candies[i + 7].image = this.$store.state.candies[i].image;
-            this.$store.state.candies[i + 7].alt = this.$store.state.candies[i].alt;
+          if (
+            this.$store.state.candies[i + 7].image === blank &&
+            !isFixedField
+          ) {
+            this.$store.state.candies[i + 7].image =
+              this.$store.state.candies[i].image;
+            this.$store.state.candies[i + 7].alt =
+              this.$store.state.candies[i].alt;
             this.$store.state.candies[i].image = blank;
             this.$store.state.candies[i].alt = "blank";
           }
@@ -108,14 +113,22 @@ export default {
     },
 
     itemRemover(matchingArray, decidedColor, score) {
-      if (matchingArray.every((square) => this.$store.state.candies[square].alt === decidedColor)) {
-        if (matchingArray.every((square) => this.$store.state.candies[square].image !== "blank.png")) {
+      if (
+        matchingArray.every(
+          (square) => this.$store.state.candies[square].alt === decidedColor
+        )
+      ) {
+        if (
+          matchingArray.every(
+            (square) => this.$store.state.candies[square].image !== "blank.png"
+          )
+        ) {
           this.setScore(score);
           this.getCurrentScore(score);
           this.setIndex(matchingArray[1]);
           this.setColor(this.$store.state.candies[matchingArray[1]].alt);
         }
-         
+
         matchingArray.forEach(
           (square) => (this.$store.state.candies[square].image = "blank.png")
         );
@@ -128,7 +141,7 @@ export default {
         const columnOfFive = [i, i + 7, i + 7 * 2, i + 7 * 3, i + 7 * 4];
         const decidedColor = this.$store.state.candies[i].alt;
 
-        this.itemRemover(columnOfFive, decidedColor, score)
+        this.itemRemover(columnOfFive, decidedColor, score);
       }
     },
 
@@ -143,7 +156,7 @@ export default {
 
         if (notValid.includes(i)) continue;
 
-        this.itemRemover(rowOfFive, decidedColor, score)
+        this.itemRemover(rowOfFive, decidedColor, score);
       }
     },
 
@@ -158,7 +171,7 @@ export default {
 
         if (notValid.includes(i)) continue;
 
-        this.itemRemover(rowOfFour, decidedColor, score)
+        this.itemRemover(rowOfFour, decidedColor, score);
       }
     },
 
@@ -167,7 +180,7 @@ export default {
         const columnOfFour = [i, i + 7, i + 7 * 2, i + 7 * 3];
         const decidedColor = this.$store.state.candies[i].alt;
 
-        this.itemRemover(columnOfFour, decidedColor, score)
+        this.itemRemover(columnOfFour, decidedColor, score);
       }
     },
 
@@ -176,13 +189,13 @@ export default {
         const rowOfUpLeftDoubleThree = [i, i + 1, i + 2, i - 7, i - 7 * 2];
         const decidedColor = this.$store.state.candies[i].alt;
         const notValid = [
-          0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 19,
-          20, 21, 26, 27, 28, 33, 34, 35, 39, 40, 41, 42, 47, 48,
+          0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 19, 20, 21, 26, 27,
+          28, 33, 34, 35, 39, 40, 41, 42, 47, 48,
         ];
 
         if (notValid.includes(i)) continue;
 
-        this.itemRemover(rowOfUpLeftDoubleThree, decidedColor, score)
+        this.itemRemover(rowOfUpLeftDoubleThree, decidedColor, score);
       }
     },
 
@@ -191,13 +204,13 @@ export default {
         const rowOfUpLeftDoubleThree = [i, i - 1, i - 2, i - 7, i - 7 * 2];
         const decidedColor = this.$store.state.candies[i].alt;
         const notValid = [
-          0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
-          20, 21, 22, 27, 28, 29, 35, 36, 37, 41, 42, 43, 48,
+          0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 20, 21, 22, 27,
+          28, 29, 35, 36, 37, 41, 42, 43, 48,
         ];
 
         if (notValid.includes(i)) continue;
 
-        this.itemRemover(rowOfUpLeftDoubleThree, decidedColor, score)
+        this.itemRemover(rowOfUpLeftDoubleThree, decidedColor, score);
       }
     },
 
@@ -206,13 +219,13 @@ export default {
         const rowOfUpLeftDoubleThree = [i, i + 1, i + 2, i + 7, i + 7 * 2];
         const decidedColor = this.$store.state.candies[i].alt;
         const notValid = [
-          0, 5, 6, 7, 11, 12, 13, 19, 20, 21, 26, 27, 28, 33, 34, 
-          35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48,
+          0, 5, 6, 7, 11, 12, 13, 19, 20, 21, 26, 27, 28, 33, 34, 35, 36, 37,
+          38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48,
         ];
 
         if (notValid.includes(i)) continue;
 
-        this.itemRemover(rowOfUpLeftDoubleThree, decidedColor, score)
+        this.itemRemover(rowOfUpLeftDoubleThree, decidedColor, score);
       }
     },
 
@@ -221,13 +234,13 @@ export default {
         const rowOfUpLeftDoubleThree = [i, i - 1, i - 2, i + 7, i + 7 * 2];
         const decidedColor = this.$store.state.candies[i].alt;
         const notValid = [
-          0, 1, 6, 7, 8, 9, 13, 14, 15, 21, 22, 27, 28, 29, 34, 
-          35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48,
+          0, 1, 6, 7, 8, 9, 13, 14, 15, 21, 22, 27, 28, 29, 34, 35, 36, 37, 38,
+          39, 40, 41, 42, 43, 44, 45, 46, 47, 48,
         ];
 
         if (notValid.includes(i)) continue;
 
-        this.itemRemover(rowOfUpLeftDoubleThree, decidedColor, score)
+        this.itemRemover(rowOfUpLeftDoubleThree, decidedColor, score);
       }
     },
 
@@ -241,7 +254,7 @@ export default {
 
         if (notValid.includes(i)) continue;
 
-        this.itemRemover(rowOfThree, decidedColor, score)
+        this.itemRemover(rowOfThree, decidedColor, score);
       }
     },
 
@@ -250,29 +263,29 @@ export default {
         const columnOfThree = [i, i + 7, i + 7 * 2];
         const decidedColor = this.$store.state.candies[i].alt;
 
-        this.itemRemover(columnOfThree, decidedColor, score)
+        this.itemRemover(columnOfThree, decidedColor, score);
       }
     },
 
     setColor(color) {
-      this.$emit('updateColor', color);
+      this.$emit("updateColor", color);
     },
 
     setIndex(index) {
-      this.$emit('updateIndex', index);
+      this.$emit("updateIndex", index);
     },
 
     setScore(score) {
-      this.$emit('updateScore', score);
+      this.$emit("updateScore", score);
     },
 
     getCurrentScore(score) {
-      this.$emit('updateGetScore', score);
+      this.$emit("updateGetScore", score);
     },
 
     setMoves() {
-      this.$emit('decrementMoves', 1)
-    }
+      this.$emit("decrementMoves", 1);
+    },
   },
 
   mounted() {
