@@ -16,12 +16,12 @@ import SoundButton from "@/components/SoundButton.vue";
 
 export default {
   name: "Header",
-  props: ['coins'],
+  props: ["coins"],
   components: {
     Life,
     Star,
     Coins,
-    SoundButton
+    SoundButton,
   },
 };
 </script>
@@ -30,7 +30,8 @@ export default {
 .header {
   width: 800px;
   height: 60px;
-  background: url("../assets/images/header_background.jpg") no-repeat center fixed;
+  background: url("../assets/images/header_background.jpg") no-repeat center
+    fixed;
   z-index: 11;
   position: fixed;
   top: 35px;
