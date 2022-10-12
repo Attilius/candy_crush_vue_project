@@ -16,9 +16,9 @@
 
 <script>
 export default {
-    name: "SoundButton",
-    
-    methods: {
+  name: "SoundButton",
+
+  methods: {
     soundToggle() {
       const soundButton = document.getElementById("sound");
       const play = '<i class="fa-solid fa-volume-high"></i>';
@@ -48,7 +48,8 @@ export default {
   cursor: pointer;
   color: #fff8dc;
   font-size: 18px;
-  text-shadow: -1px 0 firebrick, 0 1px firebrick, 1px 0 firebrick, 0 -1px firebrick;
+  text-shadow: -1px 0 firebrick, 0 1px firebrick, 1px 0 firebrick,
+    0 -1px firebrick;
   position: absolute;
   top: 10px;
   right: 40px;
