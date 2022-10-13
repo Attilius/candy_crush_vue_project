@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <Navbar />
-    <Header :coins="coins" />
+    <Header :coins="setCoins" />
     <div class="body">
       <div class="body-left"></div>
       <div class="body-right"></div>
@@ -89,6 +89,10 @@ export default {
     setGiftTimeCounter() {
       return this.$store.getters.giftTimeCounter;
     },
+
+    setCoins() {
+      return this.$store.getters.coins;
+    }
   },
 
   methods: {
@@ -154,8 +158,8 @@ export default {
             }
           }
         } else {
-          hour = 2;
-          min = 59;
+          hour = 0;
+          min = 0;
           sec = 60;
         }
 
