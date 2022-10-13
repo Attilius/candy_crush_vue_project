@@ -290,6 +290,10 @@ export default new Vuex.Store({
 
         changeGiftTimeCounter(state, value) {
             state.gift_time_counter = value;
+        },
+
+        changeCoins(state, value) {
+            state.coins += value;
         }
     },
     actions: {},
