@@ -300,7 +300,7 @@ export default new Vuex.Store({
     modules: {},
     plugins: [createPersistedState(
         {
-            paths: ['life', 'life_status', 'gift_time_counter']
+            paths: ['life', 'life_status', 'gift_time_counter', 'coins']
         }
     )],
 });
