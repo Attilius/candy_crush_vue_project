@@ -271,8 +271,8 @@ export default new Vuex.Store({
             return state.gift_time_counter;
         },
 
-        score() {
-            return state.score;
+        coins() {
+            return state.coins;
         }
     },
     mutations: {
