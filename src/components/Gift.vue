@@ -56,10 +56,6 @@ export default {
       this.$emit("updateWaitingGift", true);
     },
 
-    setCoins() {
-      this.$emit("updateCoins", this.currentPrize);
-    },
-
     getRandomPrize() {
       const size = this.prizes.length;
       const randomIndex = Math.floor(Math.random() * size);
