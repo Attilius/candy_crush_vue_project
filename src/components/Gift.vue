@@ -65,6 +65,10 @@ export default {
       const randomIndex = Math.floor(Math.random() * size);
       this.currentPrize = this.prizes[randomIndex];
     },
+
+    changeConisInStore(value) {
+      this.$store.commit('changeCoins', value);
+    }
   },
 };
 </script>
