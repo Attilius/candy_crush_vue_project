@@ -40,7 +40,6 @@ export default {
     toClaim() {
       this.getRandomPrize();
       this.setWaitingGift();
-      this.setCoins();
       this.changeConisInStore(this.currentPrize);
       this.displayClaim = false;
     },
