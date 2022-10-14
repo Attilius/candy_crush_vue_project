@@ -253,6 +253,9 @@ export default new Vuex.Store({
                 alt: "red"
             },
         ],
+        levels: {
+
+        },
         life: 20,
         life_status: '',
         gift_time_counter: '',
