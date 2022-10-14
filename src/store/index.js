@@ -256,8 +256,8 @@ export default new Vuex.Store({
         life: 20,
         life_status: '',
         gift_time_counter: '',
-        coins: 0,
-        stars: 0
+        coins: 382,
+        stars: 162
     },
     getters: {
         life(state) {
