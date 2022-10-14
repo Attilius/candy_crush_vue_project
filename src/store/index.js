@@ -299,6 +299,10 @@ export default new Vuex.Store({
 
         changeCoins(state, value) {
             state.coins += value;
+        },
+
+        changeStars(state, value) {
+            state.stars += value;
         }
     },
     actions: {},
