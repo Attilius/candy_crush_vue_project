@@ -8,6 +8,12 @@
 <script>
 export default {
   name: "Stars",
+
+  computed: {
+    setStars() {
+      return this.$store.getters.stars;
+    }
+  }
 };
 </script>
 
