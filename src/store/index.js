@@ -274,6 +274,10 @@ export default new Vuex.Store({
 
         coins(state) {
             return state.coins;
+        },
+
+        stars(state) {
+            return state.stars;
         }
     },
     mutations: {
