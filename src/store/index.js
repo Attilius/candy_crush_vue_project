@@ -258,7 +258,7 @@ export default new Vuex.Store({
                 completed: false,
                 stars: 0
             },
-            level_2: {
+            "level_2": {
                 completed: false,
                 stars: 0
             },
