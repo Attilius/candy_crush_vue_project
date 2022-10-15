@@ -266,7 +266,7 @@ export default new Vuex.Store({
                 completed: false,
                 stars: 0
             },
-            level_4: {
+            "level_4": {
                 completed: false,
                 stars: 0
             },
