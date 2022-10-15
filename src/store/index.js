@@ -294,6 +294,10 @@ export default new Vuex.Store({
                 completed: false,
                 stars: 0
             },
+            "level_11": {
+                completed: false,
+                stars: 0
+            },
         },
         life: 20,
         life_status: '',
