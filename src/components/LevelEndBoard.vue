@@ -67,6 +67,7 @@ export default {
   border-radius: 20px;
   visibility: visible;
 }
+
 .levelEndCover {
   height: 515px;
   width: 515px;
