@@ -3,6 +3,11 @@
     <div v-if="won" class="levelEndCover">
       <h1 id="level">Level 1</h1>
       <h2>You win!</h2>
+      <div class="lose">
+        <div class="score pos_center">
+          <h1>{{ score }}</h1>
+        </div>
+      </div>
       <div class="buttonGroup">
         <div class="again" @click="retryLevel">Retry</div>
       </div>
@@ -31,7 +36,7 @@
 <script>
 export default {
   name: "LevelEndBoard",
-  props: ["visibility", "won"],
+  props: ["visibility", "won", "score"],
 
   methods: {
     backToMain() {
@@ -167,5 +172,9 @@ export default {
 .again:active {
   height: 68px;
   width: 148px;
+}
+
+.pos_center {
+  margin-left: 50px;
 }
 </style>
