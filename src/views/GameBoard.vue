@@ -14,6 +14,7 @@
       <LevelEndBoard 
         :visibility="levelEndVisibility" 
         :won="isWon" 
+        :score="score"
       />
       <Score
         :score="getScore"
@@ -63,6 +64,7 @@ export default {
       if (newValue >= 500) {
         this.sugarCrushVisibility = "visible";
         this.isWon = true;
+        this.levelEndVisibility = "visible";
       }
     },
     moves(newValue, oldValue) {
