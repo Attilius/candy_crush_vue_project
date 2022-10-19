@@ -24,7 +24,7 @@
 <script>
 export default {
   name: "LevelEndBoard",
-  props: ["visibility"],
+  props: ["visibility", "won"],
 
   methods: {
     backToMain() {
