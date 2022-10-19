@@ -11,7 +11,7 @@
         @decrementMoves="(setMoves) => (moves -= setMoves)"
       />
       <SugarCrush :visibility="sugarCrushVisibility" />
-      <LevelEndBoard :visibility="levelEndVisibility" />
+      <LevelEndBoard :visibility="levelEndVisibility" :won="isWon" />
       <Score
         :score="getScore"
         :index="index"
