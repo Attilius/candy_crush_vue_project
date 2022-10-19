@@ -1,6 +1,13 @@
 <template>
   <div class="back" :style="{ visibility: visibility }">
-    <div class="levelEndCover">
+    <div v-if="won" class="levelEndCover">
+      <h1 id="level">Level 1</h1>
+      <h2>You win!</h2>
+      <div class="buttonGroup">
+        <div class="again" @click="retryLevel">Retry</div>
+      </div>
+    </div>
+    <div v-else class="levelEndCover">
       <h1 id="level">Level 1</h1>
       <div class="exit" id="exit" @click="backToMain">
         <i class="fa-solid fa-xmark"></i>
