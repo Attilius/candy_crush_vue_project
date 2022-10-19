@@ -48,6 +48,7 @@ export default {
       score: 0,
       getScore: 0,
       index: 0,
+      isWon: false,
       color: "",
       sugarCrushVisibility: "hidden",
       levelEndVisibility: "hidden",
