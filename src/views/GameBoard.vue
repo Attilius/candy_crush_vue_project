@@ -59,6 +59,7 @@ export default {
     score(newValue, oldValue) {
       if (newValue >= 500) {
         this.sugarCrushVisibility = "visible";
+        this.isWon = true;
       }
     },
     moves(newValue, oldValue) {
