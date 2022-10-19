@@ -5,7 +5,11 @@
       <div class="exit" id="exit" @click="backToMain">
         <i class="fa-solid fa-xmark"></i>
       </div>
-      <h2>You lose!</h2>
+      <div v-if="won">
+
+      </div>
+      <div v-else>
+<h2>You lose!</h2>
       <div class="lose">
         <h2 class="loseLife">-1</h2>
         <img
@@ -14,6 +18,9 @@
           alt="broken heart"
         />
       </div>
+      </div>
+      
+      
       <div class="buttonGroup">
         <div class="again" @click="retryLevel">Retry</div>
       </div>
