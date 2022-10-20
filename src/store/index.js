@@ -290,37 +290,37 @@ export default new Vuex.Store({
                 stars: 0
             },
             "level_8": {
-                completed: false,
+                isCompleted: false,
                 highest_score: 0,
                 stars: 0
             },
             "level_9": {
-                completed: false,
+                isCompleted: false,
                 highest_score: 0,
                 stars: 0
             },
             "level_10": {
-                completed: false,
+                isCompleted: false,
                 highest_score: 0,
                 stars: 0
             },
             "level_11": {
-                completed: false,
+                isCompleted: false,
                 highest_score: 0,
                 stars: 0
             },
             "level_12": {
-                completed: false,
+                isCompleted: false,
                 highest_score: 0,
                 stars: 0
             },
             "level_13": {
-                completed: false,
+                isCompleted: false,
                 highest_score: 0,
                 stars: 0
             },
             "level_14": {
-                completed: false,
+                isCompleted: false,
                 highest_score: 0,
                 stars: 0
             },
