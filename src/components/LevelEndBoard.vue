@@ -9,7 +9,7 @@
         </div>
       </div>
       <div class="buttonGroup">
-        <div class="again" @click="retryLevel">Retry</div>
+        <div class="again" @click="retryLevelAfterWin">Retry</div>
       </div>
     </div>
     <div v-else class="levelEndCover">
@@ -27,7 +27,7 @@
         />
       </div>
       <div class="buttonGroup">
-        <div class="again" @click="retryLevel">Retry</div>
+        <div class="again" @click="retryLevelAfterLose">Retry</div>
       </div>
     </div>
   </div>
@@ -44,8 +44,12 @@ export default {
       location.href = "/";
     },
 
-    retryLevel() {
+    retryLevelAfterLose() {
       this.changeLifeInStore();
+      location.reload();
+    },
+
+    retryLevelAfterWin() {
       location.reload();
     },
 
