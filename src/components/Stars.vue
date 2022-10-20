@@ -1,7 +1,7 @@
 <template>
   <div class="stars">
     <div id="star"></div>
-    <div id="earned-stars">{{setStars}}</div>
+    <div id="earned-stars">{{ setStars }}</div>
   </div>
 </template>
 
