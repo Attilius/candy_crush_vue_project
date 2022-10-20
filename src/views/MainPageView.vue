@@ -157,8 +157,8 @@ export default {
             }
           }
         } else {
-          hour = 0;
-          min = 0;
+          hour = 2;
+          min = 59;
           sec = 60;
         }
 
