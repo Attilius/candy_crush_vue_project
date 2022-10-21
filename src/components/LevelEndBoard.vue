@@ -9,7 +9,7 @@
         </div>
       </div>
       <div class="buttonGroup">
-        <div class="again" @click="retryLevelAfterWin">Retry</div>
+        <div class="again-win" @click="retryLevelAfterWin">Retry</div>
         <div class="continue" @click="continueAfterWin">Continue</div>
       </div>
     </div>
@@ -174,6 +174,14 @@ export default {
 
 .again {
   background: url("../assets/images/green_long_button.png") no-repeat center;
+  background-size: cover;
+  height: 70px;
+  width: 150px;
+  bottom: 50px;
+}
+
+.again-win {
+  background: url("../assets/images/blue_long_button.png") no-repeat center;
   background-size: cover;
   height: 70px;
   width: 150px;
