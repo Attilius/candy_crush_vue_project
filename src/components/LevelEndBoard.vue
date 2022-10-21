@@ -137,7 +137,8 @@ export default {
 }
 
 .exit,
-.again {
+.again,
+.continue {
   height: 50px;
   width: 50px;
   display: flex;
