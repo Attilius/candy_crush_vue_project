@@ -10,6 +10,7 @@
       </div>
       <div class="buttonGroup">
         <div class="again" @click="retryLevelAfterWin">Retry</div>
+        <div class="continue" @click="continueAfterWin">Continue</div>
       </div>
     </div>
     <div v-else class="levelEndCover">
