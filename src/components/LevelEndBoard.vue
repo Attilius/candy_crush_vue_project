@@ -180,6 +180,7 @@ export default {
   background-size: cover;
   height: 70px;
   width: 150px;
+  bottom: 50px;
 }
 
 .again:active,
