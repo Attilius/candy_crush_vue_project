@@ -175,6 +175,10 @@ export default {
   bottom: 50px;
 }
 
+.continue {
+  background: url("../assets/images/blue_long_button.png") no-repeat center;
+}
+
 .again:active,
 .continue:active {
   height: 68px;
