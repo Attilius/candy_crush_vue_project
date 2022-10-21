@@ -175,7 +175,8 @@ export default {
   bottom: 50px;
 }
 
-.again:active {
+.again:active,
+.continue:active {
   height: 68px;
   width: 148px;
 }
