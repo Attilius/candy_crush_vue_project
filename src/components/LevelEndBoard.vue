@@ -143,6 +143,7 @@ export default {
 
 .exit,
 .again,
+.again-win,
 .continue {
   height: 50px;
   width: 50px;
@@ -155,7 +156,6 @@ export default {
   font-weight: 700;
   text-shadow: -2px 0 firebrick, 0 2px firebrick, 2px 0 firebrick,
     0 -2px firebrick;
-  position: absolute;
 }
 
 .exit {
