@@ -57,6 +57,10 @@ export default {
     changeLifeInStore() {
       this.$store.commit("decrement", 1);
     },
+
+    continueAfterWin() {
+      console.log("Continue")
+    }
   },
 };
 </script>
@@ -177,7 +181,7 @@ export default {
 }
 
 .continue {
-  background: url("../assets/images/blue_long_button.png") no-repeat center;
+  background: url("../assets/images/green_long_button.png") no-repeat center;
   background-size: cover;
   height: 70px;
   width: 150px;
