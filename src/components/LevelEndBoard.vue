@@ -198,7 +198,6 @@ export default {
   background: url("../assets/images/green_long_button.png") no-repeat center;
   background-size: cover;
   height: 70px;
-  width: 150px;
 }
 
 .again:active,
