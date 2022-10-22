@@ -103,7 +103,7 @@ export default {
   width: 100%;
   height: 10%;
   position: relative;
-  bottom: 0;
+  bottom: 50px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -145,14 +145,13 @@ export default {
 .again,
 .again-win,
 .continue {
-  height: 50px;
   width: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   color: #fff8dc;
-  font-size: 33px;
+  font-size: 30px;
   font-weight: 700;
   text-shadow: -2px 0 firebrick, 0 2px firebrick, 2px 0 firebrick,
     0 -2px firebrick;
