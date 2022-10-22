@@ -189,7 +189,6 @@ export default {
 .again-win {
   background: url("../assets/images/blue_long_button.png") no-repeat center;
   background-size: cover;
-  height: 70px;
 }
 
 .continue {
