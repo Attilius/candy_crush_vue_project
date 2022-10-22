@@ -190,7 +190,6 @@ export default {
   background: url("../assets/images/blue_long_button.png") no-repeat center;
   background-size: cover;
   height: 70px;
-  width: 150px;
 }
 
 .continue {
