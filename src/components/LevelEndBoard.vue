@@ -199,4 +199,8 @@ export default {
 .pos_center {
   margin-left: 50px;
 }
+
+#cup {
+  background-color: transparent;
+}
 </style>
