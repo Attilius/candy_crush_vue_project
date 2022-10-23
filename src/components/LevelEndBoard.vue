@@ -4,8 +4,8 @@
       <h1 id="level">Level 1</h1>
       <h2>You win!</h2>
       <div class="lose">
+        <img src="../assets/images/cup.png" id="cup" alt="cup" />
         <div class="score pos_center">
-          <img src="../assets/images/cup.png" id="cup" alt="cup" />
           <h1>{{ score }}</h1>
         </div>
       </div>
@@ -97,6 +97,7 @@ export default {
   color: #ff00ff;
   text-align: center;
   margin-top: 30px;
+  margin-bottom: 0;
   text-shadow: purple 1px 1px;
 }
 
@@ -104,7 +105,7 @@ export default {
   width: 100%;
   height: 10%;
   position: relative;
-  bottom: 50px;
+  bottom: 100px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -198,6 +199,9 @@ export default {
 
 .pos_center {
   margin-left: 50px;
+  width: 50%;
+  position: absolute;
+  left: 80px;
 }
 
 #cup {
@@ -206,6 +210,8 @@ export default {
   height: 120px;
   width: 120px;
   position: relative;
-  left: -100px;
+  top: 5px;
+  left: -120px;
+  z-index: 11;
 }
 </style>
