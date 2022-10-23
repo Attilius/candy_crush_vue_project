@@ -59,7 +59,7 @@ export default {
     },
 
     continueAfterWin() {
-      console.log("Continue")
+      location.href = "/";
     }
   },
 };
