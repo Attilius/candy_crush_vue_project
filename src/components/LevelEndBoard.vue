@@ -194,6 +194,7 @@ export default {
 }
 
 .again:active,
+.again-win:active,
 .continue:active {
   height: 68px;
   width: 148px;
