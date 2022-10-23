@@ -206,5 +206,6 @@ export default {
   height: 120px;
   width: 120px;
   position: relative;
+  left: -100px;
 }
 </style>
