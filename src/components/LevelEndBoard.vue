@@ -205,5 +205,6 @@ export default {
   border: none;
   height: 120px;
   width: 120px;
+  position: relative;
 }
 </style>
