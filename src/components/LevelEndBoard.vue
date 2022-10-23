@@ -172,7 +172,7 @@ export default {
 
 .again,
 .again-win,
-.contonue {
+.continue {
   height: 70px;
   width: 150px;
   bottom: 50px;
