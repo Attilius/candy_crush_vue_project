@@ -5,6 +5,7 @@
       <h2>You win!</h2>
       <div class="lose">
         <div class="score pos_center">
+          <img src="../assets/images/cup.png" id="cup" alt="cup" />
           <h1>{{ score }}</h1>
         </div>
       </div>
