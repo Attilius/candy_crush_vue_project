@@ -190,7 +190,6 @@ export default {
 
 .continue {
   background: url("../assets/images/green_long_button.png") no-repeat center;
-  background-size: cover;
 }
 
 .again:active,
