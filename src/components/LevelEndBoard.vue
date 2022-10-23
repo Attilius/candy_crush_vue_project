@@ -202,5 +202,8 @@ export default {
 
 #cup {
   background-color: transparent;
+  border: none;
+  height: 120px;
+  width: 120px;
 }
 </style>
