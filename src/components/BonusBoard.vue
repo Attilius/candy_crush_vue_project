@@ -1,12 +1,17 @@
 <template>
   <div class="bonus-board">
-
+    <SoundButton />
   </div>
 </template>
 
 <script>
+import SoundButton from "@/components/SoundButton.vue";
+
 export default {
-    name: "BonusBoard"
+    name: "BonusBoard",
+    components: {
+        SoundButton
+    }
 }
 </script>
 
