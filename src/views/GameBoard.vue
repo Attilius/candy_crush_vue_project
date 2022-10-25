@@ -34,6 +34,7 @@ import GameTable from "@/components/GameTable.vue";
 import SugarCrush from "@/components/SugarCrush.vue";
 import LevelEndBoard from "@/components/LevelEndBoard.vue";
 import Score from "@/components/Score.vue";
+import BonusBoard from "@/components/BonusBoard.vue";
 
 export default {
   name: "GameBoard",
