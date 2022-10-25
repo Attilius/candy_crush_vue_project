@@ -15,5 +15,6 @@ export default {
   background-color: cornflowerblue;
   color: white;
   width: 125px;
+  height: 650px;
 }
 </style>
