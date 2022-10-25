@@ -45,6 +45,7 @@ export default {
     SugarCrush,
     LevelEndBoard,
     Score,
+    BonusBoard,
   },
 
   data() {
