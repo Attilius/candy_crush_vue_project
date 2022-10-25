@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div class="bonus-board">
+
+  </div>
 </template>
 
 <script>
@@ -9,5 +11,7 @@ export default {
 </script>
 
 <style>
-
+.bonus-board {
+  background-color: cornflowerblue;
+}
 </style>
