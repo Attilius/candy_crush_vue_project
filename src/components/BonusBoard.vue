@@ -13,5 +13,6 @@ export default {
 <style>
 .bonus-board {
   background-color: cornflowerblue;
+  color: white;
 }
 </style>
