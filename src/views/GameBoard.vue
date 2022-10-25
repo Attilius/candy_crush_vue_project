@@ -10,6 +10,7 @@
         @updateColor="(setColor) => (color = setColor)"
         @decrementMoves="(setMoves) => (moves -= setMoves)"
       />
+      <BonusBoard />
       <SugarCrush :visibility="sugarCrushVisibility" />
       <LevelEndBoard 
         :visibility="levelEndVisibility" 
