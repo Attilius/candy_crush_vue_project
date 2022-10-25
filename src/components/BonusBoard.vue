@@ -20,5 +20,8 @@ export default {
   right: 340px;
   top: 80px;
   border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 </style>
