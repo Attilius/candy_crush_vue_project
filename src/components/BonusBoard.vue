@@ -14,7 +14,10 @@ export default {
 .bonus-board {
   background-color: cornflowerblue;
   color: white;
-  width: 125px;
+  width: 100px;
   height: 650px;
+  position: absolute;
+  right: 340px;
+  top: 80px;
 }
 </style>
