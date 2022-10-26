@@ -32,5 +32,6 @@ export default {
 
 #sound-btn {
   position: relative;
+  left: 10px;
 }
 </style>
