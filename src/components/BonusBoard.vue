@@ -1,5 +1,6 @@
 <template>
   <div class="bonus-board">
+    <img src="../assets/images/hand.png" alt="">
     <SoundButton id="sound-btn" />
   </div>
 </template>
