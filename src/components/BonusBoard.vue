@@ -40,6 +40,6 @@ export default {
 #hand {
   background: transparent;
   border: none;
-  margin: 0 auto;
+  margin: 100px auto 0;
 }
 </style>
