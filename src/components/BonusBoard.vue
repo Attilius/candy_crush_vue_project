@@ -34,6 +34,7 @@ export default {
 #sound-btn {
   position: absolute;
   left: 110px;
+  top: 570px;
 }
 
 #hand {
