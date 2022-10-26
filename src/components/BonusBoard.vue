@@ -32,8 +32,8 @@ export default {
 }
 
 #sound-btn {
-  position: relative;
-  left: 10px;
+  position: absolute;
+  left: 110px;
 }
 
 #hand {
