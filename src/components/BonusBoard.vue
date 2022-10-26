@@ -1,6 +1,6 @@
 <template>
   <div class="bonus-board">
-    <img src="../assets/images/hand.png" alt="hand">
+    <img src="../assets/images/hand.png" id="hand" alt="hand">
     <SoundButton id="sound-btn" />
   </div>
 </template>
@@ -34,5 +34,11 @@ export default {
 #sound-btn {
   position: relative;
   left: 10px;
+}
+
+#hand {
+  background: transparent;
+  border: none;
+  margin: 0 auto;
 }
 </style>
