@@ -1,6 +1,6 @@
 <template>
   <div class="bonus-board">
-    <SoundButton />
+    <SoundButton id="sound-btn" />
   </div>
 </template>
 
@@ -28,5 +28,8 @@ export default {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+}
+
+#sound-btn {
 }
 </style>
