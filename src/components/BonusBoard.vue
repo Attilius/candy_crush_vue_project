@@ -50,5 +50,6 @@ export default {
   margin: 0 auto;
   position: absolute;
   top: 220px;
+  left: 15px;
 }
 </style>
