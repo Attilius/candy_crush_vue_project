@@ -46,5 +46,6 @@ export default {
 
 #lollipop {
   background: transparent;
+  border: none;
 }
 </style>
