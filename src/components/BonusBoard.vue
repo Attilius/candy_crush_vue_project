@@ -43,4 +43,8 @@ export default {
   border: none;
   margin: 100px auto 0;
 }
+
+#lollipop {
+  
+}
 </style>
