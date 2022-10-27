@@ -1,7 +1,7 @@
 <template>
   <div class="bonus-board">
     <img src="../assets/images/hand.png" id="hand" alt="hand">
-    <img src="../assets/images/lollipop.png" alt="lollipop">
+    <img src="../assets/images/lollipop.png" id="lollipop" alt="lollipop">
     <SoundButton id="sound-btn" />
   </div>
 </template>
