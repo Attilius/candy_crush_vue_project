@@ -48,5 +48,7 @@ export default {
   background: transparent;
   border: none;
   margin: 0 auto;
+  position: absolute;
+  top: 220px;
 }
 </style>
