@@ -57,5 +57,6 @@ export default {
   background: transparent;
   border: none;
   position: absolute;
+  top: 330px;
 }
 </style>
