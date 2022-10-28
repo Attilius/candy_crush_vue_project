@@ -76,6 +76,7 @@ export default {
   top: 145px;
   border-radius: 20px;
   visibility: visible;
+  z-index: 111;
 }
 
 .levelEndCover {
