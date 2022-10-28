@@ -58,5 +58,6 @@ export default {
   border: none;
   position: absolute;
   top: 330px;
+  left: 15px;
 }
 </style>
