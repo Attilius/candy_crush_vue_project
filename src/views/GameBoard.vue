@@ -2,6 +2,7 @@
   <div class="game-board">
     <Navbar />
     <div>
+       <div v-if="levelEndVisibility === 'visible'" class="skin"></div>
       <ScoreBoard :moves="moves" :score="score" />
       <GameTable
         @updateScore="(setScore) => (score += setScore)"
