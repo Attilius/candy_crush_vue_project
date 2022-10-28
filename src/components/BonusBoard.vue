@@ -56,5 +56,6 @@ export default {
 #striped_wrapped {
   background: transparent;
   border: none;
+  position: absolute;
 }
 </style>
