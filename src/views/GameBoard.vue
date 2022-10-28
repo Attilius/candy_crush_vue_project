@@ -91,4 +91,11 @@ export default {
 .game-board div {
   display: flex;
 }
+
+.skin {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .7);
+  z-index: 11;
+}
 </style>
