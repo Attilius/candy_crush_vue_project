@@ -52,4 +52,8 @@ export default {
   top: 220px;
   left: 15px;
 }
+
+#striped_wrapped {
+  background: transparent;
+}
 </style>
