@@ -347,6 +347,9 @@ export default new Vuex.Store({
             "lollipop": {
                 isActive: false,
                 amountNumber: 0
+            },
+            "striped_horizontal": {
+                
             }
         },
         life: 20,
