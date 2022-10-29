@@ -343,6 +343,9 @@ export default new Vuex.Store({
             "hand": {
                 isActive: false,
                 amountNumber: 0
+            },
+            "lollipop": {
+                
             }
         },
         life: 20,
