@@ -339,6 +339,9 @@ export default new Vuex.Store({
                 stars: 0
             },
         },
+        boosters: {
+            
+        },
         life: 20,
         life_status: '',
         gift_time_counter: '',
