@@ -340,7 +340,8 @@ export default new Vuex.Store({
             },
         },
         boosters: {
-            
+            "hand": {
+            }
         },
         life: 20,
         life_status: '',
