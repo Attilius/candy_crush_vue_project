@@ -349,7 +349,7 @@ export default new Vuex.Store({
                 amountNumber: 0
             },
             "striped_horizontal": {
-                
+                isActive: false
             }
         },
         life: 20,
