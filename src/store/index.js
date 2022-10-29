@@ -341,6 +341,7 @@ export default new Vuex.Store({
         },
         boosters: {
             "hand": {
+                isActive: false
             }
         },
         life: 20,
